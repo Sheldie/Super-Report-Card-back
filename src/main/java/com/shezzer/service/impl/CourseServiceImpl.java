@@ -16,10 +16,10 @@ public class CourseServiceImpl implements CourseService {
         return courseMapper.findCourseById(COURSE_ID);
     }
 
-    @Override
-    public Course findCourseByName(String COURSE_NAME) {
-        return courseMapper.findCourseByName(COURSE_NAME);
-    }
+//    @Override
+//    public Course findCourseByName(String COURSE_NAME) {
+//        return courseMapper.findCourseByName(COURSE_NAME);
+//    }
 
     @Override
     public Course checkCourse(Course course) {

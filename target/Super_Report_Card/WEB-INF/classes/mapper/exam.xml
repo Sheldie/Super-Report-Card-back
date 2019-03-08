@@ -9,11 +9,15 @@
     </insert>
 
     <select id="checkExam" parameterType="string" resultType="Exam">
-        select * from EXAM where EXAM_NAME=#{EXAM_NAME} AND COURSE_ID=#{COURSE_ID} AND EXAM_DATE=#{EXAM_DATE}
+        select *, datediff(EXAM_DATE,sysdate()) DAYS_LEFT from EXAM where EXAM_NAME=#{EXAM_NAME} AND COURSE_ID=#{COURSE_ID} AND EXAM_DATE=#{EXAM_DATE}
     </select>
 
     <select id="findExamById" parameterType="string" resultType="Exam">
-        select * from EXAM where EXAM_ID = #{EXAM_ID}
+        select *, datediff(EXAM_DATE,sysdate()) DAYS_LEFT from EXAM where EXAM_ID = #{EXAM_ID}
+    </select>
+
+    <select id="findExamByCourse" parameterType="Course" resultType="Exam">
+        select *, datediff(EXAM_DATE,sysdate()) DAYS_LEFT from EXAM where COURSE_ID = #{COURSE_ID}
     </select>
 
 </mapper>

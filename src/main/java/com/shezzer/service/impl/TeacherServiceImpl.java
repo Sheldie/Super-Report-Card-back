@@ -6,6 +6,8 @@ import com.shezzer.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TeacherServiceImpl implements TeacherService {
     @Autowired
@@ -20,5 +22,10 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public Teacher findTeacherById(int TEACHER_ID) {
         return teacherMapper.findTeacherById(TEACHER_ID);
+    }
+
+    @Override
+    public List<Teacher> findTeacherByDepartment(int Department_id) {
+        return teacherMapper.findTeacherByDepartment(Department_id);
     }
 }

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/exam")
@@ -35,7 +36,7 @@ public class ExamController {
     private StudentService studentService;
 
     @PostMapping("/addExam")
-    @ApiOperation(value = "addExam", notes = "添加一次考试，并为所有该班级的学生添加一条空成绩信息")
+    @ApiOperation(value = "添加一次考试，并为所有该班级的学生添加一条空成绩信息", notes = "日期格式：YYYY-MM-DD")
     @ApiResponses({
             @ApiResponse(code = -1, message = "Error"),
             @ApiResponse(code = 0, message = "Exam added."),
@@ -73,6 +74,44 @@ public class ExamController {
                     return Result.success(0, "Exam added.");
                 }
             }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/infoExam")
+    @ApiOperation(value = "根据考试ID，查询考试信息", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "Exam doesn't exist.")
+    })
+    public Result infoExam(int EXAM_ID){
+        try {
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam != null){
+                return Result.success(exam);
+            }
+            else {
+                return Result.failed(1 , "Exam doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/courseExam")
+    public Result courseExam(int COURSE_ID){
+        try{
+            Course course = courseService.findCourseById(COURSE_ID);
+            if(course != null){
+                List<Exam> list = examService.findExamByCourse(COURSE_ID);
+                return Result.success(list);
+            }
+            else
+                return Result.failed(1, "Course doesn't exist.");
         }
         catch (Exception e){
             return Result.error(e.toString());

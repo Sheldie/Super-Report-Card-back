@@ -2,10 +2,20 @@ package com.shezzer.pojo;
 
 public class Course {
     private int COURSE_ID;
-    private String COURSE_NAME;
+    private int SUBJECT_ID;
     private int TEACHER_ID;
     private int CLASS_ID;
     private String SEMESTER;
+
+    public Course() {
+    }
+
+    public Course(int SUBJECT_ID, int TEACHER_ID, int CLASS_ID, String SEMESTER) {
+        this.SUBJECT_ID = SUBJECT_ID;
+        this.TEACHER_ID = TEACHER_ID;
+        this.CLASS_ID = CLASS_ID;
+        this.SEMESTER = SEMESTER;
+    }
 
     public int getCOURSE_ID() {
         return COURSE_ID;
@@ -15,12 +25,12 @@ public class Course {
         this.COURSE_ID = COURSE_ID;
     }
 
-    public String getCOURSE_NAME() {
-        return COURSE_NAME;
+    public int getSUBJECT_ID() {
+        return SUBJECT_ID;
     }
 
-    public void setCOURSE_NAME(String COURSE_NAME) {
-        this.COURSE_NAME = COURSE_NAME;
+    public void setSUBJECT_ID(int SUBJECT_ID) {
+        this.SUBJECT_ID = SUBJECT_ID;
     }
 
     public int getTEACHER_ID() {

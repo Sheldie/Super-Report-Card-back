@@ -7,6 +7,7 @@ public class Exam {
     private String EXAM_NAME;
     private int COURSE_ID;
     private Date EXAM_DATE;
+    private int DAYS_LEFT;
 
     public Exam() {
     }
@@ -47,6 +48,10 @@ public class Exam {
 
     public void setEXAM_DATE(Date EXAM_DATE) {
         this.EXAM_DATE = EXAM_DATE;
+    }
+
+    public int getDAYS_LEFT() {
+        return DAYS_LEFT;
     }
 
 }
