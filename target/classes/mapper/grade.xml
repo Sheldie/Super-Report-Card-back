@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="com.shezzer.mapper.GradeMapper">
+
+    <insert id="addGrade" parameterType="Grade">
+        insert into GRADE (EXAM_ID, STUDENT_ID) values (#{EXAM_ID}, #{STUDENT_ID})
+    </insert>
+
+    <select id="findGradeByStudentAndExam" parameterType="string" resultType="Grade">
+        select * from GRADE where STUDENT_ID=#{STUDENT_ID} and EXAM_ID=#{EXAM_ID}
+    </select>
+
+    <select id="findGradeByStudentAndSemester" parameterType="string" resultType="Map">
+        select S.STUDENT_NAME, C.COURSE_NAME, E.EXAM_NAME, G.GRADE, G.TARGET from GRADE G, COURSE C, EXAM E, STUDENT S
+        where G.EXAM_ID IN (select EXAM_ID
+            from EXAM where COURSE_ID IN (select COURSE_ID
+                from COURSE where SEMESTER = #{SEMESTER}))
+                AND G.STUDENT_ID = #{STUDENT_ID}
+                AND E.EXAM_ID = G.EXAM_ID
+                AND C.COURSE_ID = E.COURSE_ID
+                AND G.STUDENT_ID = S.USER_ID;
+    </select>
+    
+    <select id="findGradeByExam" parameterType="string" resultType="Grade">
+        select * from GRADE where EXAM_ID = #{EXAM_ID}
+    </select>
+    
+    <select id="gradeData" parameterType="string" resultType="Map">
+        select convert(AVG(GRADE),decimal) AVG, MAX(GRADE) MAX, MIN(GRADE) MIN from GRADE where EXAM_ID = #{EXAM_ID}
+    </select>
+
+
+</mapper>
