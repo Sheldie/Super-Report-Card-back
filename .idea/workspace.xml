@@ -6,7 +6,162 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af3dd38e-1803-4ac9-a0f5-82f8c2e8e37b" name="Default Changelist" comment="" />
+    <list default="true" id="af3dd38e-1803-4ac9-a0f5-82f8c2e8e37b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/GradeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/SchoolController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/TeacherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/ClassMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/CourseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/DepartmentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/SchoolMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/StudentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/TeacherMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Exam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Grade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/School.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/base/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/ClassService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/DepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/SchoolService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/TeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/ClassServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/CourseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/SchoolServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/TeacherServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/class.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/course.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/department.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/school.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/student.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/teacher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/mapper/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/classes/springMVC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/aspectjweaver-1.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/byte-buddy-1.8.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/classmate-1.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-beanutils-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-collections-3.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-fileupload-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-io-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-lang-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/druid-1.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/ezmorph-1.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/filters-2.0.235-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/guava-20.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jackson-core-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jackson-core-asl-1.9.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/json-lib-2.4-jdk15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jsqlparser-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/kaptcha-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/log4j-1.2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/mapstruct-1.2.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/mybatis-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/mybatis-generator-core-1.3.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/mybatis-spring-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/pagehelper-5.1.2-beta.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/protobuf-java-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-aspects-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-plugin-core-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-plugin-metadata-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-test-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-web-4.3.14.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/spring-webmvc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-core-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-schema-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-spi-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-spring-web-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-swagger-common-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-swagger-ui-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/springfox-swagger2-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/swagger-annotations-1.5.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/lib/swagger-models-1.5.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/Super_Report_Card/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/GradeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/SchoolController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/TeacherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/ClassMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/CourseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/DepartmentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/SchoolMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/StudentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/TeacherMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Exam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Grade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/School.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/pojo/base/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/ClassService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/DepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/SchoolService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/TeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/ClassServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/CourseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/SchoolServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/TeacherServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/com/shezzer/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/class.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/course.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/department.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/school.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/student.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/teacher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/mapper/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target2/classes/springMVC.xml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,13 +197,14 @@
           <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -97,7 +253,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/grade.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="418">
               <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
             </state>
           </provider>
@@ -106,8 +262,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/GradeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="228">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,7 +275,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+              <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,6 +296,9 @@
         <option value="spring-beans.schema" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -224,13 +383,12 @@
     <option name="width" value="1932" />
     <option name="height" value="1045" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,14 +502,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551928731649" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/tiaozhan-back-end" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552007911526" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -479,11 +639,12 @@
       <workItem from="1551846859518" duration="10662000" />
       <workItem from="1551922274134" duration="6524000" />
       <workItem from="1551968039692" duration="4638000" />
+      <workItem from="1552006371259" duration="1174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184905000" />
+    <option name="totallyTimeSpent" value="186079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,9 +657,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23027718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23294243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -512,13 +672,13 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.31453362" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
-      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.329718" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.329718" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -816,9 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="981">
           <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,10 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,34 +1000,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/grade.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/GradeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/GradeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,9 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,10 +1021,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/grade.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/GradeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+          <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
