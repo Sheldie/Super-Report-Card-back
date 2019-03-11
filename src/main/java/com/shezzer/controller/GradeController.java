@@ -97,7 +97,7 @@ public class GradeController {
     }
 
     @PostMapping("/findGradeByExam")
-    @ApiOperation(value = "查询某次考试的学生成绩", notes = "")
+    @ApiOperation(value = "查看成绩时：查询某次考试的学生成绩", notes = "")
     @ApiResponses({
             @ApiResponse(code = -1, message = "Error"),
             @ApiResponse(code = 0, message = "Success"),
@@ -107,7 +107,7 @@ public class GradeController {
         try{
             Exam exam = examService.findExamById(EXAM_ID);
             if(exam != null){
-                List<Grade> list = gradeService.findGradeByExam(EXAM_ID);
+                List<Map> list = gradeService.findGradeByExam(EXAM_ID);
                 return Result.success(list);
             }
             else {
@@ -141,7 +141,55 @@ public class GradeController {
             return Result.error(e.toString());
         }
     }
-    //
+
+    @PostMapping("/getGradeByExam")
+    @ApiOperation(value = "发布成绩时：获取表格", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "Exam doesn't exist.")
+    })
+    public Result getGradeByExam(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam != null){
+                List<Map> list= gradeService.getGradeByExam(EXAM_ID);
+                return Result.success(list);
+            }
+            else {
+                return Result.failed(1, "Exam doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+
+
+    @PostMapping("/updateGrade")
+    @ApiOperation(value = "更新成绩", notes = "")
+    public Result updateGrade(String GRADE_ID, String GRADE){
+        try{
+            String[] ID = GRADE_ID.split(",");
+            String[] GE = GRADE.split(",");
+
+            if(ID.length != GE.length)
+                return Result.failed(1, "Don't match.");
+
+            for(int i = 0; i < ID.length; ++i){
+                Grade grade = new Grade();
+                grade.setGRADE_ID(Integer.parseInt(ID[i]));
+                grade.setGRADE(Integer.parseInt(GE[i]));
+                gradeService.updateGrade(grade);
+            }
+
+            return Result.success(0, "Successful update.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
 
 
 

@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+import java.util.Map;
+
 @RestController
 @RequestMapping(value = "/course")
 public class CourseController {
@@ -66,6 +69,29 @@ public class CourseController {
             }
             else{
                 return Result.failed(1, "Subject doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findCourseByTeacher")
+    @ApiOperation(value = "老师查询自己的课程", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "Teacher doesn't exist.")
+    })
+    public Result findCourseByTeacher(int TEACHER_ID){
+        try{
+            Teacher teacher = teacherService.findTeacherById(TEACHER_ID);
+            if(teacher != null){
+                List<Map> list = courseService.findCourseByTeacher(TEACHER_ID);
+                return Result.success(list);
+            }
+            else {
+                return Result.failed(1, "Teacher doesn't exist.");
             }
         }
         catch (Exception e){

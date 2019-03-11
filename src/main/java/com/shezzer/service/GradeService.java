@@ -7,8 +7,10 @@ import java.util.Map;
 
 public interface GradeService {
     boolean addGrade(Grade grade);
+    boolean updateGrade(Grade grade);
     Grade findGradeByStudentAndExam(Grade grade);
-    List<Grade> findGradeByExam(int EXAM_ID);
+    List<Map> findGradeByExam(int EXAM_ID);
+    List<Map> getGradeByExam(int EXAM_ID);
     List<Map> findGradeByStudentAndSemester(int STUDENT_ID, String SEMESTER);
     Map<String, String> gradeData(int EXAM_ID);
 }

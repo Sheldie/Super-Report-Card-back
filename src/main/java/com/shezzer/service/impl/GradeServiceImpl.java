@@ -22,13 +22,24 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public boolean updateGrade(Grade grade) {
+        gradeMapper.updateGrade(grade);
+        return true;
+    }
+
+    @Override
     public Grade findGradeByStudentAndExam(Grade grade) {
         return gradeMapper.findGradeByStudentAndExam(grade);
     }
 
     @Override
-    public List<Grade> findGradeByExam(int EXAM_ID) {
+    public List<Map> findGradeByExam(int EXAM_ID) {
         return gradeMapper.findGradeByExam(EXAM_ID);
+    }
+
+    @Override
+    public List<Map> getGradeByExam(int EXAM_ID) {
+        return gradeMapper.getGradeByExam(EXAM_ID);
     }
 
     @Override

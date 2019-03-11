@@ -16,23 +16,58 @@
     </select>
 
     <select id="findGradeByStudentAndSemester" parameterType="string" resultType="Map">
-        select S.STUDENT_NAME, C.COURSE_NAME, E.EXAM_NAME, G.GRADE, G.TARGET from GRADE G, COURSE C, EXAM E, STUDENT S
-        where G.EXAM_ID IN (select EXAM_ID
-            from EXAM where COURSE_ID IN (select COURSE_ID
-                from COURSE where SEMESTER = #{SEMESTER}))
-                AND G.STUDENT_ID = #{STUDENT_ID}
-                AND E.EXAM_ID = G.EXAM_ID
-                AND C.COURSE_ID = E.COURSE_ID
-                AND G.STUDENT_ID = S.USER_ID;
+        select S.STUDENT_NAME, SU.SUBJECT_NAME, E.EXAM_NAME, T.GRADE, T.TARGET, T.RANK
+            from (SELECT *,
+            @curRank := IF(@prevRank = GRADE, @curRank, @incRank) AS rank,
+            @incRank := @incRank + 1,
+            @prevRank := GRADE
+            FROM GRADE G, (
+            SELECT @curRank :=0, @prevRank := NULL, @incRank := 1
+            ) r
+            ORDER BY GRADE DESC) T, COURSE C, EXAM E, STUDENT S, SUBJECT SU
+                    where T.EXAM_ID IN (select EXAM_ID
+                        from EXAM where COURSE_ID IN (select COURSE_ID
+                            from COURSE where SEMESTER = '20182019S'))
+                            AND T.STUDENT_ID = 19
+                            AND E.EXAM_ID = T.EXAM_ID
+                            AND C.COURSE_ID = E.COURSE_ID
+                            AND T.STUDENT_ID = S.USER_ID
+                            AND SU.SUBJECT_ID = C.SUBJECT_ID;
     </select>
     
-    <select id="findGradeByExam" parameterType="string" resultType="Grade">
-        select * from GRADE where EXAM_ID = #{EXAM_ID}
+    <select id="findGradeByExam" parameterType="string" resultType="Map">
+        SELECT S.STUDENT_NAME, T.GRADE, T.RANK, CONVERT(100 - (T.RANK - 1) / (P.CNT - 1) * 100, DECIMAL(10,2)) RATE, T.TARGET FROM
+            (SELECT *,
+            @curRank := IF(@prevRank = GRADE, @curRank, @incRank) AS RANK,
+            @incRank := @incRank + 1,
+            @prevRank := GRADE
+            FROM GRADE G, (
+            SELECT @curRank :=0, @prevRank := NULL, @incRank := 1
+            ) r
+            WHERE EXAM_ID = #{EXAM_ID}
+            ORDER BY GRADE DESC) T,
+
+            (SELECT COUNT(*) CNT FROM GRADE
+            WHERE EXAM_ID = #{EXAM_ID}) P, STUDENT S
+
+            WHERE S.USER_ID = T.STUDENT_ID;
     </select>
     
     <select id="gradeData" parameterType="string" resultType="Map">
         select convert(AVG(GRADE),decimal) AVG, MAX(GRADE) MAX, MIN(GRADE) MIN from GRADE where EXAM_ID = #{EXAM_ID}
     </select>
+
+    <select id="getGradeByExam" parameterType="string" resultType="Map">
+        select G.GRADE_ID, S.STUDENT_NAME, G.GRADE
+        from GRADE G, STUDENT S
+        where S.USER_ID = G.STUDENT_ID
+        and G.EXAM_ID = #{EXAM_ID};
+    </select>
+
+    <update id="updateGrade" parameterType="Grade">
+        update GRADE set GRADE = #{GRADE}
+        where GRADE_ID = #{GRADE_ID}
+    </update>
 
 
 </mapper>

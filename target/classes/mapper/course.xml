@@ -20,5 +20,12 @@
     <select id="checkCourse" parameterType="string" resultType="Course">
         select * from COURSE where SUBJECT_ID = #{SUBJECT_ID} and TEACHER_ID = #{TEACHER_ID} and CLASS_ID = #{CLASS_ID} and SEMESTER = #{SEMESTER}
     </select>
+    
+    <select id="findCourseByTeacher" parameterType="string" resultType="Map">
+        select CL.CLASS_NAME, S.SUBJECT_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL
+        where C.TEACHER_ID = #{TEACHER_ID}
+          AND S.SUBJECT_ID = C.SUBJECT_ID
+          AND C.CLASS_ID = CL.CLASS_ID;
+    </select>
 
 </mapper>

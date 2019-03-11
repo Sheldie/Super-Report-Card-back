@@ -89,8 +89,8 @@ public class SchoolController {
     @ApiOperation(value = "infoSchool", notes = "学校负责人查询学校的详细信息")
     @ApiResponses({
             @ApiResponse(code = -1, message = "Error"),
-            @ApiResponse(code = 0, message = "学校信息"),
-            @ApiResponse(code = 1, message = "Permission denied.")
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "Not an admin.")
     })
     public Result<School> infoSchool(int USER_ID){
         try {

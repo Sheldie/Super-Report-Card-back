@@ -6,6 +6,9 @@ import com.shezzer.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class CourseServiceImpl implements CourseService {
     @Autowired
@@ -24,6 +27,11 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Course checkCourse(Course course) {
         return courseMapper.checkCourse(course);
+    }
+
+    @Override
+    public List<Map> findCourseByTeacher(int TEACHER_ID) {
+        return courseMapper.findCourseByTeacher(TEACHER_ID);
     }
 
     @Override

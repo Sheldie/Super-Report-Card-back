@@ -103,6 +103,12 @@ public class ExamController {
     }
 
     @PostMapping("/courseExam")
+    @ApiOperation(value = "根据课程查询考试信息", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "Course doesn't exist.")
+    })
     public Result courseExam(int COURSE_ID){
         try{
             Course course = courseService.findCourseById(COURSE_ID);
