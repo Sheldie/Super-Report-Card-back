@@ -169,6 +169,11 @@ public class GradeController {
 
     @PostMapping("/updateGrade")
     @ApiOperation(value = "更新成绩", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Successful update."),
+            @ApiResponse(code = 1, message = "Don't match.")
+    })
     public Result updateGrade(String GRADE_ID, String GRADE){
         try{
             String[] ID = GRADE_ID.split(",");
@@ -185,6 +190,26 @@ public class GradeController {
             }
 
             return Result.success(0, "Successful update.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/gradeSegmentation")
+    @ApiOperation(value = "成绩分段查询", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Grade doesn't exist.")
+    })
+    public Result gradeSegmentation(int EXAM_ID){
+        try{
+            List<Map> list = gradeService.gradeSegmentation(EXAM_ID);
+            if(list != null)
+                return Result.success(list);
+            else
+                return Result.failed(1, "Grade doesn't exist.");
         }
         catch (Exception e){
             return Result.error(e.toString());

@@ -48,6 +48,11 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public List<Map> gradeSegmentation(int EXAM_ID) {
+        return gradeMapper.gradeSegmentation(EXAM_ID);
+    }
+
+    @Override
     public Map<String, String> gradeData(int EXAM_ID) {
         return gradeMapper.gradeData(EXAM_ID);
     }

@@ -54,7 +54,7 @@
     </select>
     
     <select id="gradeData" parameterType="string" resultType="Map">
-        select convert(AVG(GRADE),decimal) AVG, MAX(GRADE) MAX, MIN(GRADE) MIN from GRADE where EXAM_ID = #{EXAM_ID}
+        select count(*) COUNT, convert(AVG(GRADE),decimal) AVG, MAX(GRADE) MAX, MIN(GRADE) MIN from GRADE where EXAM_ID = #{EXAM_ID}
     </select>
 
     <select id="getGradeByExam" parameterType="string" resultType="Map">
@@ -62,6 +62,27 @@
         from GRADE G, STUDENT S
         where S.USER_ID = G.STUDENT_ID
         and G.EXAM_ID = #{EXAM_ID};
+    </select>
+
+    <select id="gradeSegmentation" parameterType="string" resultType="Map">
+        select
+        sum(case when GRADE &lt; 10 then 1 else 0 end) as '[0,10)',
+        sum(case when GRADE >= 10 and GRADE &lt; 20 then 1 else 0 end) as '[10,20)',
+        sum(case when GRADE >= 20 and GRADE &lt; 30 then 1 else 0 end) as '[20,30)',
+        sum(case when GRADE >= 30 and GRADE &lt; 40 then 1 else 0 end) as '[30,40)',
+        sum(case when GRADE >= 40 and GRADE &lt; 50 then 1 else 0 end) as '[40,50)',
+        sum(case when GRADE >= 50 and GRADE &lt; 60 then 1 else 0 end) as '[50,60)',
+        sum(case when GRADE >= 60 and GRADE &lt; 70 then 1 else 0 end) as '[60,70)',
+        sum(case when GRADE >= 70 and GRADE &lt; 80 then 1 else 0 end) as '[70,80)',
+        sum(case when GRADE >= 80 and GRADE &lt; 90 then 1 else 0 end) as '[80,90)',
+        sum(case when GRADE >= 90 and GRADE &lt; 100 then 1 else 0 end) as '[90,100)',
+        sum(case when GRADE >= 100 and GRADE &lt; 110 then 1 else 0 end) as '[100,110)',
+        sum(case when GRADE >= 110 and GRADE &lt; 120 then 1 else 0 end) as '[110,120)',
+        sum(case when GRADE >= 120 and GRADE &lt; 130 then 1 else 0 end) as '[120,130)',
+        sum(case when GRADE >= 130 and GRADE &lt; 140 then 1 else 0 end) as '[130,140)',
+        sum(case when GRADE >= 140 then 1 else 0 end) as '[140,150]'
+        from GRADE
+        where EXAM_ID = #{EXAM_ID}
     </select>
 
     <update id="updateGrade" parameterType="Grade">
