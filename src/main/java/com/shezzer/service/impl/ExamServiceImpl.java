@@ -21,6 +21,12 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
+    public boolean updateExam(Exam exam) {
+        examMapper.updateExam(exam);
+        return true;
+    }
+
+    @Override
     public Exam checkExam(Exam exam) {
         return examMapper.checkExam(exam);
     }
@@ -31,7 +37,17 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public List<Exam> findExamByCourse(int COURSE_ID) {
+    public List<Map> findExamByCourse(int COURSE_ID) {
         return examMapper.findExamByCourse(COURSE_ID);
+    }
+
+    @Override
+    public List<Map> findExamByTeacher(int TEACHER_ID) {
+        return examMapper.findExamByTeacher(TEACHER_ID);
+    }
+
+    @Override
+    public List<Map> findExamByStudent(int STUDENT_ID) {
+        return examMapper.findExamByStudent(STUDENT_ID);
     }
 }

@@ -2,6 +2,7 @@ package com.shezzer.service.impl;
 
 import com.shezzer.mapper.SchoolMapper;
 import com.shezzer.pojo.School;
+import com.shezzer.pojo.User;
 import com.shezzer.service.SchoolService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,8 +42,8 @@ public class SchoolServiceImpl implements SchoolService {
     }
 
     @Override
-    public School findSchoolByUser(int USER_ID) {
-        School school = schoolMapper.findSchoolByUser(USER_ID);
+    public School findSchoolByUser(User user) {
+        School school = schoolMapper.findSchoolByUser(user);
         if(school != null)
             return school;
         else

@@ -35,6 +35,11 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public List<Map> findCourseByStudent(int STUDENT_ID) {
+        return courseMapper.findCourseByStudent(STUDENT_ID);
+    }
+
+    @Override
     public boolean addCourse(Course course) {
         courseMapper.addCourse(course);
         return true;

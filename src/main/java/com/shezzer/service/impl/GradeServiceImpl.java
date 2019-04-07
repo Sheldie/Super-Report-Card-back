@@ -28,6 +28,17 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public boolean updateTarget(Grade grade) {
+        gradeMapper.updateTarget(grade);
+        return true;
+    }
+
+    @Override
+    public Grade findGradeById(int GRADE_ID) {
+        return gradeMapper.findGradeById(GRADE_ID);
+    }
+
+    @Override
     public Grade findGradeByStudentAndExam(Grade grade) {
         return gradeMapper.findGradeByStudentAndExam(grade);
     }
@@ -48,8 +59,18 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
-    public List<Map> gradeSegmentation(int EXAM_ID) {
+    public Map gradeSegmentation(int EXAM_ID) {
         return gradeMapper.gradeSegmentation(EXAM_ID);
+    }
+
+    @Override
+    public List<Map> gradeRate(int EXAM_ID) {
+        return gradeMapper.gradeRate(EXAM_ID);
+    }
+
+    @Override
+    public Map getRankByExamAndStudent(int STUDENT_ID, int EXAM_ID) {
+        return gradeMapper.getRankByExamAndStudent(STUDENT_ID, EXAM_ID);
     }
 
     @Override

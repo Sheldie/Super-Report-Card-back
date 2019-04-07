@@ -16,8 +16,32 @@
         select *, datediff(EXAM_DATE,sysdate()) DAYS_LEFT from EXAM where EXAM_ID = #{EXAM_ID}
     </select>
 
-    <select id="findExamByCourse" parameterType="Course" resultType="Exam">
-        select *, datediff(EXAM_DATE,sysdate()) DAYS_LEFT from EXAM where COURSE_ID = #{COURSE_ID}
+    <select id="findExamByCourse" parameterType="Course" resultType="ExamMap">
+        select E.EXAM_ID EXAM_ID, E.EXAM_NAME EXAM_NAME, C.COURSE_ID COURSE_ID, CL.CLASS_NAME CLASS_NAME, E.EXAM_DATE EXAM_DATE,datediff(EXAM_DATE,sysdate()) DAYS_LEFT
+          from EXAM E, COURSE C, CLASS CL
+          where E.COURSE_ID = C.COURSE_ID and C.CLASS_ID = CL.CLASS_ID and E.COURSE_ID = #{COURSE_ID}
     </select>
+
+    <select id="findExamByTeacher" parameterType="int" resultType="ExamMap">
+        select E.EXAM_ID EXAM_ID, E.EXAM_NAME EXAM_NAME, C.COURSE_ID COURSE_ID, CL.CLASS_NAME CLASS_NAME, E.EXAM_DATE EXAM_DATE,datediff(EXAM_DATE,sysdate()) DAYS_LEFT
+        from EXAM E, COURSE C, CLASS CL
+        where E.COURSE_ID = C.COURSE_ID and C.CLASS_ID = CL.CLASS_ID and C.TEACHER_ID = #{TEACHER_ID}
+    </select>
+
+    <select id="findExamByStudent" parameterType="int" resultType="ExamMap">
+select E.EXAM_ID EXAM_ID, E.EXAM_NAME EXAM_NAME, C.COURSE_ID COURSE_ID, CL.CLASS_NAME CLASS_NAME, E.EXAM_DATE EXAM_DATE,datediff(EXAM_DATE,sysdate()) DAYS_LEFT, G.GRADE_ID GRADE_ID, G.GRADE GRADE, G.TARGET TARGET
+        from EXAM E, COURSE C, CLASS CL, GRADE G
+        where E.COURSE_ID = C.COURSE_ID and C.CLASS_ID = CL.CLASS_ID and CL.CLASS_ID = (
+            select CLASS_ID from STUDENT
+            where USER_ID = #{STUDENT_ID}
+        )
+		AND E.EXAM_ID = G.EXAM_ID AND G.STUDENT_ID = #{STUDENT_ID};
+    </select>
+
+    <update id="updateExam" parameterType="Exam">
+        update EXAM set EXAM_NAME = #{EXAM_NAME}, EXAM_DATE = #{EXAM_DATE}
+        where EXAM_ID = #{EXAM_ID}
+    </update>
+
 
 </mapper>

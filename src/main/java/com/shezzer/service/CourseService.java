@@ -10,5 +10,6 @@ public interface CourseService {
 //    Course findCourseByName(String COURSE_NAME);
     Course checkCourse(Course course);
     List<Map> findCourseByTeacher(int TEACHER_ID);
+    List<Map> findCourseByStudent(int STUDENT_ID);
     boolean addCourse(Course course);
 }

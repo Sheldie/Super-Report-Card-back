@@ -1,14 +1,9 @@
 package com.shezzer.controller;
 
+import com.shezzer.pojo.*;
 import com.shezzer.pojo.Class;
-import com.shezzer.pojo.Course;
-import com.shezzer.pojo.Subject;
-import com.shezzer.pojo.Teacher;
 import com.shezzer.pojo.base.Result;
-import com.shezzer.service.ClassService;
-import com.shezzer.service.CourseService;
-import com.shezzer.service.SubjectService;
-import com.shezzer.service.TeacherService;
+import com.shezzer.service.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -31,6 +26,8 @@ public class CourseController {
     private ClassService classService;
     @Autowired
     private SubjectService subjectService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/addCourse")
     @ApiOperation(value = "添加课程", notes = "学期的格式：如 20182019A 或 20182019S")
@@ -92,6 +89,36 @@ public class CourseController {
             }
             else {
                 return Result.failed(1, "Teacher doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findCourseByStudent")
+    @ApiOperation(value = "学生查询自己的课程", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "User doesn't exist."),
+            @ApiResponse(code = 2, message = "Not a student.")
+    })
+    public Result findCourseByStudent(int STUDENT_ID){
+        try {
+            User user = userService.findUserById(STUDENT_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 3){
+                    List<Map> list = courseService.findCourseByStudent(STUDENT_ID);
+                    return Result.success(list);
+                }
+                else {
+                    return Result.failed(2, "Not a student.");
+                }
+            }
+            else {
+                return Result.failed(1, "User doesn't exist.");
             }
         }
         catch (Exception e){

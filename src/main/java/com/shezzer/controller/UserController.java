@@ -78,8 +78,8 @@ public class UserController {
                 User user = new User();
                 user.setUSER_NAME(username);
                 user.setUSER_PASSWORD(password);
-                userService.register(user);
-                return Result.success(0,"Successful registration.");
+                user = userService.register(user);
+                return Result.success(user.getUSER_ID());
             }
             else
                 return Result.failed(1,"Username already exists.");

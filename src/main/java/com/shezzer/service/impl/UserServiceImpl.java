@@ -14,13 +14,13 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public boolean register(User user) {
+    public User register(User user) {
         User temp = userMapper.findUserByName(user.getUSER_NAME());
         if (temp != null) {
-            return false;
+            return null;
         }
         userMapper.addUser(user);
-        return true;
+        return userMapper.findUserByName(user.getUSER_NAME());
     }
 
     @Override

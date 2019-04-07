@@ -22,7 +22,29 @@
     </select>
 
     <select id="findSchoolByUser" parameterType="string" resultType="School">
-        select * from SCHOOL where USER_ID = #{USER_ID}
+        <choose>
+            <when test="USER_AUTHORITY == 1">
+                select * from SCHOOL where USER_ID = #{USER_ID}
+            </when>
+            <when test="USER_AUTHORITY == 2">
+                select * from SCHOOL
+                where SCHOOL_ID = (
+                    select SCHOOL_ID from DEPARTMENT
+                    where DEPARTMENT_ID = (
+                        select DEPARTMENT_ID from TEACHER
+                        where USER_ID = #{USER_ID}
+                ));
+            </when>
+            <otherwise>
+                select * from SCHOOL
+                where SCHOOL_ID = (
+                    select SCHOOL_ID from CLASS
+                    where CLASS_ID = (
+                        select CLASS_ID from STUDENT
+                        where USER_ID = #{USER_ID}
+                ));
+            </otherwise>
+        </choose>
     </select>
 
     <select id="checkSchool" parameterType="string" resultType="School">

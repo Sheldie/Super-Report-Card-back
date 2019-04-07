@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/grade")
@@ -58,43 +57,43 @@ public class GradeController {
         }
     }
 
-    @PostMapping("/findGradeByStudentAndExam")
-    @ApiOperation(value = "查询某学生某次考试的成绩", notes = "")
-    @ApiResponses({
-            @ApiResponse(code = -1, message = "Error"),
-            @ApiResponse(code = 0, message = "Success"),
-            @ApiResponse(code = 1, message = "Exam doesn't exist."),
-            @ApiResponse(code = 2, message = "User doesn't exist."),
-            @ApiResponse(code = 3, message = "Not a student.")
-    })
-    public Result findGradeByStudentAndExam(int EXAM_ID, int STUDENT_ID){
-        try {
-            Exam exam = examService.findExamById(EXAM_ID);
-            if(exam != null){
-                User user = userService.findUserById(STUDENT_ID);
-                if(user != null){
-                    int AY = userService.checkAuthority(STUDENT_ID);
-                    if(AY == 3){
-                        Grade grade = new Grade(EXAM_ID, STUDENT_ID);
-                        grade = gradeService.findGradeByStudentAndExam(grade);
-                        return Result.success(grade);
-                    }
-                    else
-                        return Result.failed(3, "Not a student.");
-                }
-                else{
-                    return Result.failed(2, "User doesn't exist.");
-                }
-            }
-            else{
-                return Result.failed(1, "Exam doesn't exist.");
-            }
-
-        }
-        catch (Exception e){
-            return Result.error(e.toString());
-        }
-    }
+//    @PostMapping("/findGradeByStudentAndExam")
+//    @ApiOperation(value = "查询某学生某次考试的成绩", notes = "")
+//    @ApiResponses({
+//            @ApiResponse(code = -1, message = "Error"),
+//            @ApiResponse(code = 0, message = "Success"),
+//            @ApiResponse(code = 1, message = "Exam doesn't exist."),
+//            @ApiResponse(code = 2, message = "User doesn't exist."),
+//            @ApiResponse(code = 3, message = "Not a student.")
+//    })
+//    public Result findGradeByStudentAndExam(int EXAM_ID, int STUDENT_ID){
+//        try {
+//            Exam exam = examService.findExamById(EXAM_ID);
+//            if(exam != null){
+//                User user = userService.findUserById(STUDENT_ID);
+//                if(user != null){
+//                    int AY = userService.checkAuthority(STUDENT_ID);
+//                    if(AY == 3){
+//                        Grade grade = new Grade(EXAM_ID, STUDENT_ID);
+//                        grade = gradeService.findGradeByStudentAndExam(grade);
+//                        return Result.success(grade);
+//                    }
+//                    else
+//                        return Result.failed(3, "Not a student.");
+//                }
+//                else{
+//                    return Result.failed(2, "User doesn't exist.");
+//                }
+//            }
+//            else{
+//                return Result.failed(1, "Exam doesn't exist.");
+//            }
+//
+//        }
+//        catch (Exception e){
+//            return Result.error(e.toString());
+//        }
+//    }
 
     @PostMapping("/findGradeByExam")
     @ApiOperation(value = "查看成绩时：查询某次考试的学生成绩", notes = "")
@@ -196,6 +195,30 @@ public class GradeController {
         }
     }
 
+    @PostMapping("/updateTarget")
+    @ApiOperation(value = "设置目标分", notes = "一次更改一个")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Successful update."),
+            @ApiResponse(code = 1, message = "Grade doesn't exist."),
+    })
+    public Result updateTarget(int GRADE_ID, int TARGET){
+        try{
+            Grade grade = gradeService.findGradeById(GRADE_ID);
+            if(grade != null){
+                grade.setTARGET(TARGET);
+                gradeService.updateTarget(grade);
+                return Result.success(0, "Successful update.");
+            }
+            else {
+                return Result.failed(1, "Grade doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
     @PostMapping("/gradeSegmentation")
     @ApiOperation(value = "成绩分段查询", notes = "")
     @ApiResponses({
@@ -205,11 +228,85 @@ public class GradeController {
     })
     public Result gradeSegmentation(int EXAM_ID){
         try{
-            List<Map> list = gradeService.gradeSegmentation(EXAM_ID);
+            Map map = gradeService.gradeSegmentation(EXAM_ID);
+
+            if(map != null){
+                Map<String,List> res = new HashMap<>();
+                Iterator<String> iter = map.keySet().iterator();
+                List<String> key = new ArrayList<>();
+                List<String> value = new ArrayList<>();
+
+                while(iter.hasNext()){
+                    String temp = iter.next();
+                    key.add(temp);
+                    value.add(map.get(temp).toString());
+                }
+                res.put("key", key);
+                res.put("value", value);
+                return Result.success(res);
+
+            }
+            else
+                return Result.failed(1, "Grade doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/gradeRate")
+    @ApiOperation(value = "优良率查询", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Grade doesn't exist.")
+    })
+    public Result gradeRate(int EXAM_ID){
+        try{
+            List<Map> list = gradeService.gradeRate(EXAM_ID);
             if(list != null)
                 return Result.success(list);
             else
                 return Result.failed(1, "Grade doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/getRankByExamAndStudent")
+    @ApiOperation(value = "获取某学生某次考试的名次", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "User doesn't exist."),
+            @ApiResponse(code = 1, message = "Not a student.")
+    })
+    public Result getRankByExamAndStudent(int EXAM_ID, int STUDENT_ID){
+        try {
+            User user = userService.findUserById(STUDENT_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 3){
+                    Exam exam = examService.findExamById(EXAM_ID);
+                    if(exam != null){
+                        Map map = gradeService.getRankByExamAndStudent(STUDENT_ID,EXAM_ID);
+                        if(map != null){
+                            return Result.success(map);
+                        }
+                        else {
+                            return Result.failed(4, "The student did not take the test.");
+                        }
+                    }
+                    else {
+                        return Result.failed(3, "Exam doesn't exist.");
+                    }
+                }
+                else
+                    return Result.failed(2, "Not a student.");
+            }
+            else
+                return Result.failed(1, "User doesn't exist.");
         }
         catch (Exception e){
             return Result.error(e.toString());

@@ -22,10 +22,18 @@
     </select>
     
     <select id="findCourseByTeacher" parameterType="string" resultType="Map">
-        select C.COURSE_ID, CL.CLASS_NAME, S.SUBJECT_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL
+        select C.COURSE_ID, CL.CLASS_ID, CL.CLASS_NAME, S.SUBJECT_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL
         where C.TEACHER_ID = #{TEACHER_ID}
           AND S.SUBJECT_ID = C.SUBJECT_ID
           AND C.CLASS_ID = CL.CLASS_ID;
+    </select>
+
+    <select id="findCourseByStudent" parameterType="string" resultType="Map">
+        select C.COURSE_ID, CL.CLASS_NAME, S.SUBJECT_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL, STUDENT ST
+        where ST.USER_ID = #{STUDENT_ID}
+          AND S.SUBJECT_ID = C.SUBJECT_ID
+          AND C.CLASS_ID = CL.CLASS_ID
+          AND ST.CLASS_ID = C.CLASS_ID;
     </select>
 
 </mapper>

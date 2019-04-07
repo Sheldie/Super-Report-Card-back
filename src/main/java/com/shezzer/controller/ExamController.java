@@ -1,14 +1,8 @@
 package com.shezzer.controller;
 
-import com.shezzer.pojo.Course;
-import com.shezzer.pojo.Exam;
-import com.shezzer.pojo.Grade;
-import com.shezzer.pojo.Student;
+import com.shezzer.pojo.*;
 import com.shezzer.pojo.base.Result;
-import com.shezzer.service.CourseService;
-import com.shezzer.service.ExamService;
-import com.shezzer.service.GradeService;
-import com.shezzer.service.StudentService;
+import com.shezzer.service.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -34,6 +28,8 @@ public class ExamController {
     private GradeService gradeService;
     @Autowired
     private StudentService studentService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/addExam")
     @ApiOperation(value = "添加一次考试，并为所有该班级的学生添加一条空成绩信息", notes = "日期格式：YYYY-MM-DD")
@@ -113,11 +109,98 @@ public class ExamController {
         try{
             Course course = courseService.findCourseById(COURSE_ID);
             if(course != null){
-                List<Exam> list = examService.findExamByCourse(COURSE_ID);
+                List<Map> list = examService.findExamByCourse(COURSE_ID);
                 return Result.success(list);
             }
             else
                 return Result.failed(1, "Course doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findExamByTeacher")
+    @ApiOperation(value = "根据老师查询考试信息", notes = "GRADE和TARGET此处不需要，用于学生查询")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "User doesn't exist."),
+            @ApiResponse(code = 2, message = "Not a teacher.")
+    })
+    public Result findExamByTeacher(int TEACHER_ID){
+        try{
+            User user = userService.findUserById(TEACHER_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 2){
+                    List<Map> list = examService.findExamByTeacher(TEACHER_ID);
+                    return Result.success(list);
+                }
+                else {
+                    return Result.failed(2, "Not a teacher.");
+                }
+            }
+            else {
+                return Result.failed(1, "User doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findExamByStudent")
+    @ApiOperation(value = "根据学生查询考试信息", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success"),
+            @ApiResponse(code = 1, message = "User doesn't exist."),
+            @ApiResponse(code = 2, message = "Not a student.")
+    })
+    public Result findExamByStudent(int STUDENT_ID){
+        try{
+            User user = userService.findUserById(STUDENT_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 3){
+                    List<Map> list = examService.findExamByStudent(STUDENT_ID);
+                    return Result.success(list);
+                }
+                else {
+                    return Result.failed(2, "Not a student.");
+                }
+            }
+            else {
+                return Result.failed(1, "User doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/updateExam")
+    @ApiOperation(value = "更新考试信息", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Successful update."),
+            @ApiResponse(code = 1, message = "Exam doesn't exist.")
+    })
+    public Result updateExam(int EXAM_ID, String EXAM_NAME, String EXAM_DATE){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam != null){
+                Date date = new SimpleDateFormat("yyyy-MM-dd").parse(EXAM_DATE);
+                java.sql.Date sqldate = new java.sql.Date(date.getTime());
+                exam.setEXAM_NAME(EXAM_NAME);
+                exam.setEXAM_DATE(sqldate);
+                examService.updateExam(exam);
+                return Result.success(0, "Successful update.");
+            }
+            else {
+                return Result.failed(1, "Exam doesn't exist.");
+            }
         }
         catch (Exception e){
             return Result.error(e.toString());

@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/student")
 public class StudentController {
@@ -28,7 +30,7 @@ public class StudentController {
     private UserService userService;
 
     @PostMapping("/addStudent")
-    @ApiOperation(value = "addStudent", notes = "用户注册成功后，选择注册学生信息")
+    @ApiOperation(value = "学生注册", notes = "用户注册成功后，选择注册学生信息")
     @ApiResponses({
             @ApiResponse(code = -1, message = "Error"),
             @ApiResponse(code = 0, message = "Student added."),
@@ -68,6 +70,29 @@ public class StudentController {
                         }
                     }
                 }
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findStudentByClass")
+    @ApiOperation(value = "根据班级列出学生名单", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Class doesn't exist."),
+    })
+    public Result findStudentByClass(int CLASS_ID){
+        try{
+            Class cs = classService.findClassById(CLASS_ID);
+            if(cs != null) {
+                List<Student> list = studentService.findStudentByClass(CLASS_ID);
+                return Result.success(list);
+            }
+            else {
+                return Result.failed(1, "Class doesn't exist.");
             }
         }
         catch (Exception e){

@@ -3,13 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-
-
 <mapper namespace="com.shezzer.mapper.GradeMapper">
 
     <insert id="addGrade" parameterType="Grade">
         insert into GRADE (EXAM_ID, STUDENT_ID) values (#{EXAM_ID}, #{STUDENT_ID})
     </insert>
+
+    <select id="findGradeById" parameterType="string" resultType="Grade">
+        select * from GRADE where GRADE_ID = #{GRADE_ID}
+    </select>
 
     <select id="findGradeByStudentAndExam" parameterType="string" resultType="Grade">
         select * from GRADE where STUDENT_ID=#{STUDENT_ID} and EXAM_ID=#{EXAM_ID}
@@ -57,8 +59,8 @@
         select count(*) COUNT, convert(AVG(GRADE),decimal) AVG, MAX(GRADE) MAX, MIN(GRADE) MIN from GRADE where EXAM_ID = #{EXAM_ID}
     </select>
 
-    <select id="getGradeByExam" parameterType="string" resultType="Map">
-        select G.GRADE_ID, S.STUDENT_NAME, G.GRADE
+    <select id="getGradeByExam" parameterType="string" resultType="GradeMap">
+        select G.GRADE_ID, S.STUDENT_NAME, G.GRADE, G.TARGET
         from GRADE G, STUDENT S
         where S.USER_ID = G.STUDENT_ID
         and G.EXAM_ID = #{EXAM_ID};
@@ -66,6 +68,7 @@
 
     <select id="gradeSegmentation" parameterType="string" resultType="Map">
         select
+        count(*) COUNT,
         sum(case when GRADE &lt; 10 then 1 else 0 end) as '[0,10)',
         sum(case when GRADE >= 10 and GRADE &lt; 20 then 1 else 0 end) as '[10,20)',
         sum(case when GRADE >= 20 and GRADE &lt; 30 then 1 else 0 end) as '[20,30)',
@@ -85,10 +88,49 @@
         where EXAM_ID = #{EXAM_ID}
     </select>
 
+    <select id="gradeRate" parameterType="string" resultType="Map">
+        select R.COUNT, R.EXCELLENT, R.GOOD, R.PASS, R.FAILED,
+            convert(R.EXCELLENT/R.COUNT*100,decimal(10,2)) GOOD_RATE,
+            convert(R.GOOD/R.COUNT*100,decimal(10,2)) GOOD_RATE,
+            convert(R.PASS/R.COUNT*100,decimal(10,2)) PASS_RATE,
+            convert(R.FAILED/R.COUNT*100,decimal(10,2)) FAILED_RATE
+
+        from (select
+                count(*) COUNT,
+                sum(case when GRADE >= 135 then 1 else 0 end) EXCELLENT,
+                sum(case when GRADE >= 120 and GRADE &lt; 135 then 1 else 0 end) GOOD,
+                sum(case when GRADE >= 90 and GRADE &lt; 120 then 1 else 0 end) PASS,
+                sum(case when GRADE >= 0 and GRADE &lt; 90 then 1 else 0 end) FAILED
+        from GRADE
+        where EXAM_ID = 5) R;
+    </select>
+
+    <select id="getRankByExamAndStudent" parameterType="string" resultType="Map">
+        SELECT S.STUDENT_NAME, T.GRADE, T.RANK, CONVERT(100 - (T.RANK - 1) / (P.CNT - 1) * 100, DECIMAL(10,2)) RATE, T.TARGET FROM
+            (SELECT *,
+            @curRank := IF(@prevRank = GRADE, @curRank, @incRank) AS RANK,
+            @incRank := @incRank + 1,
+            @prevRank := GRADE
+            FROM GRADE G, (
+            SELECT @curRank :=0, @prevRank := NULL, @incRank := 1
+            ) r
+            WHERE EXAM_ID = #{EXAM_ID}
+            ORDER BY GRADE DESC) T,
+
+            (SELECT COUNT(*) CNT FROM GRADE
+            WHERE EXAM_ID =#{EXAM_ID}) P, STUDENT S
+
+            WHERE S.USER_ID = T.STUDENT_ID and T.STUDENT_ID = #{STUDENT_ID};
+    </select>
+
     <update id="updateGrade" parameterType="Grade">
         update GRADE set GRADE = #{GRADE}
         where GRADE_ID = #{GRADE_ID}
     </update>
 
+    <update id="updateTarget" parameterType="Grade">
+        update GRADE set TARGET = #{TARGET}
+        where GRADE_ID = #{GRADE_ID}
+    </update>
 
 </mapper>

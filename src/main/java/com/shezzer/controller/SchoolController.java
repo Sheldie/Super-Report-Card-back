@@ -86,19 +86,29 @@ public class SchoolController {
     }
 
     @PostMapping("/infoSchool")
-    @ApiOperation(value = "infoSchool", notes = "学校负责人查询学校的详细信息")
+    @ApiOperation(value = "用户查询自己学校的信息", notes = "")
     @ApiResponses({
             @ApiResponse(code = -1, message = "Error"),
             @ApiResponse(code = 0, message = "Success"),
-            @ApiResponse(code = 1, message = "Not an admin.")
+            @ApiResponse(code = 1, message = "User doesn't exist."),
+            @ApiResponse(code = 2, message = "Permission denied.")
     })
     public Result<School> infoSchool(int USER_ID){
         try {
-            School school = schoolService.findSchoolByUser(USER_ID);
-            if(school != null)
-                return Result.success(school);
-            else
-                return Result.failed(-1,"Permission denied.");
+            User user = userService.findUserById(USER_ID);
+            if(user != null) {
+                int AY = user.getUSER_AUTHORITY();
+                if(AY != -1 && AY != 0){
+                    School school = schoolService.findSchoolByUser(user);
+                    return Result.success(school);
+                }
+                else {
+                    return Result.failed(2, "Permission denied.");
+                }
+            }
+            else {
+                return Result.failed(1, "User doesn't exist.");
+            }
         }
         catch (Exception e){
             return Result.error(e.toString());
