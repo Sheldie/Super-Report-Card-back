@@ -313,6 +313,97 @@ public class GradeController {
         }
     }
 
+    @PostMapping("/studentComment")
+    @ApiOperation(value = "学生的成绩评价", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Grade doesn't exist."),
+    })
+    public Result studentComment(int GRADE_ID, int S_SCORE, String S_COMMENT){
+        try{
+            Grade grade = gradeService.findGradeById(GRADE_ID);
+            if(grade != null){
+                grade.setS_SCORE(S_SCORE);
+                grade.setS_COMMENT(S_COMMENT);
+                gradeService.studentComment(grade);
+                return Result.success(0, "Successful update.");
+            }
+            else {
+                return Result.failed(1, "Grade doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
 
+    @PostMapping("/teacherComment")
+    @ApiOperation(value = "教师的成绩评价", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Grade doesn't exist."),
+    })
+    public Result teacherComment(int GRADE_ID, int T_SCORE, String T_COMMENT){
+        try{
+            Grade grade = gradeService.findGradeById(GRADE_ID);
+            if(grade != null){
+                grade.setT_SCORE(T_SCORE);
+                grade.setT_COMMENT(T_COMMENT);
+                gradeService.teacherComment(grade);
+                return Result.success(0, "Successful update.");
+            }
+            else {
+                return Result.failed(1, "Grade doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findGradeById")
+    @ApiOperation(value = "根据ID查询成绩", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success.")
+    })
+    public Result findGradeById(int GRADE_ID){
+        try{
+            Grade grade = gradeService.findGradeById(GRADE_ID);
+            return Result.success(grade);
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findGradeByStudentAndCourse")
+    @ApiOperation(value = "根据学生和课程查成绩", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success.")
+    })
+    public Result findGradeByStudentAndCourse(int USER_ID, int COURSE_ID){
+        try {
+            User user = userService.findUserById(USER_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 3){
+                    return Result.success(gradeService.findGradeByStudentAndCourse(COURSE_ID, USER_ID));
+                }
+                else{
+                    return Result.failed(2, "Not a student.");
+                }
+            }
+            else{
+                return Result.failed(1, "User doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
 
 }

@@ -34,6 +34,24 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public boolean deleteGrade(int GRADE_ID) {
+        gradeMapper.deleteGrade(GRADE_ID);
+        return true;
+    }
+
+    @Override
+    public boolean studentComment(Grade grade) {
+        gradeMapper.studentComment(grade);
+        return true;
+    }
+
+    @Override
+    public boolean teacherComment(Grade grade) {
+        gradeMapper.teacherComment(grade);
+        return true;
+    }
+
+    @Override
     public Grade findGradeById(int GRADE_ID) {
         return gradeMapper.findGradeById(GRADE_ID);
     }
@@ -56,6 +74,11 @@ public class GradeServiceImpl implements GradeService {
     @Override
     public List<Map> findGradeByStudentAndSemester(int STUDENT_ID, String SEMESTER) {
         return gradeMapper.findGradeByStudentAndSemester(STUDENT_ID, SEMESTER);
+    }
+
+    @Override
+    public List<Map> findGradeByStudentAndCourse(int COURSE_ID, int STUDENT_ID) {
+        return gradeMapper.findGradeByStudentAndCourse(COURSE_ID, STUDENT_ID);
     }
 
     @Override

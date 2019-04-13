@@ -13,4 +13,5 @@ public interface ExamMapper {
     List<Map> findExamByCourse(int COURSE_ID);
     List<Map> findExamByTeacher(int TEACHER_ID);
     List<Map> findExamByStudent(int STUDENT_ID);
+    void deleteExam(Exam exam);
 }

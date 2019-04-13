@@ -16,6 +16,4 @@
         select * from STUDENT where STUDENT_NAME=#{STUDENT_NAME} AND STUDENT_NUM=#{STUDENT_NUM} AND CLASS_ID=#{CLASS_ID}
     </select>
 
-
-
 </mapper>

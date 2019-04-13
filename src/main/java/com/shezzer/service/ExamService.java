@@ -8,6 +8,7 @@ import java.util.Map;
 public interface ExamService {
     boolean addExam(Exam exam);
     boolean updateExam(Exam exam);
+    boolean deleteExam(Exam exam);
     Exam checkExam(Exam exam);
     Exam findExamById(int EXAM_ID);
     List<Map> findExamByCourse(int COURSE_ID);

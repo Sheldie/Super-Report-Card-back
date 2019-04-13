@@ -2,10 +2,12 @@ package com.shezzer.controller;
 
 
 import com.shezzer.pojo.Class;
+import com.shezzer.pojo.Course;
 import com.shezzer.pojo.Student;
 import com.shezzer.pojo.User;
 import com.shezzer.pojo.base.Result;
 import com.shezzer.service.ClassService;
+import com.shezzer.service.CourseService;
 import com.shezzer.service.StudentService;
 import com.shezzer.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +30,8 @@ public class StudentController {
     private ClassService classService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private CourseService courseService;
 
     @PostMapping("/addStudent")
     @ApiOperation(value = "学生注册", notes = "用户注册成功后，选择注册学生信息")
@@ -93,6 +97,28 @@ public class StudentController {
             }
             else {
                 return Result.failed(1, "Class doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findStudentByCourse")
+    @ApiOperation(value = "根据课程列出学生名单", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Success."),
+            @ApiResponse(code = 1, message = "Class doesn't exist."),
+    })
+    public Result findStudentByCourse(int COURSE_ID){
+        try {
+            Course course = courseService.findCourseById(COURSE_ID);
+            if(course != null){
+                return Result.success(studentService.findStudentByClass(course.getCLASS_ID()));
+            }
+            else{
+                return Result.failed(1, "Course doesn't exist.");
             }
         }
         catch (Exception e){

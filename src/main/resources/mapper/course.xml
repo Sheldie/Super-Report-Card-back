@@ -25,7 +25,7 @@
         select C.COURSE_ID, CL.CLASS_ID, CL.CLASS_NAME, S.SUBJECT_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL
         where C.TEACHER_ID = #{TEACHER_ID}
           AND S.SUBJECT_ID = C.SUBJECT_ID
-          AND C.CLASS_ID = CL.CLASS_ID;
+          AND C.CLASS_ID = CL.CLASS_ID
     </select>
 
     <select id="findCourseByStudent" parameterType="string" resultType="Map">
@@ -33,7 +33,13 @@
         where ST.USER_ID = #{STUDENT_ID}
           AND S.SUBJECT_ID = C.SUBJECT_ID
           AND C.CLASS_ID = CL.CLASS_ID
-          AND ST.CLASS_ID = C.CLASS_ID;
+          AND ST.CLASS_ID = C.CLASS_ID
+    </select>
+
+    <select id="findClassByTeacher" parameterType="string" resultType="Map">
+        select distinct C.CLASS_ID, CL.CLASS_NAME from COURSE C, CLASS CL
+        where C.CLASS_ID = CL.CLASS_ID
+        and C.TEACHER_ID = #{TEACHER_ID}
     </select>
 
 </mapper>

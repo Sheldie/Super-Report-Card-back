@@ -10,6 +10,9 @@ public interface GradeMapper {
     void addGrade(Grade grade);
     void updateGrade(Grade grade);
     void updateTarget(Grade grade);
+    void deleteGrade(int GRADE_ID);
+    void studentComment(Grade grade);
+    void teacherComment(Grade grade);
     Grade findGradeById(int GRADE_ID);
     Grade findGradeByStudentAndExam(Grade grade);
     List<Map> findGradeByStudentAndSemester(@Param("STUDENT_ID") int STUDENT_ID, @Param("SEMESTER") String SEMESTER);
@@ -18,6 +21,7 @@ public interface GradeMapper {
     List<Map> getGradeByExam(int EXAM_ID);
     Map gradeSegmentation(int EXAM_ID);
     List<Map> gradeRate(int EXAM_ID);
+    List<Map> findGradeByStudentAndCourse(@Param("COURSE_ID")int COURSE_ID, @Param("STUDENT_ID") int STUDENT_ID);
     Map getRankByExamAndStudent(@Param("STUDENT_ID") int STUDENT_ID, @Param("EXAM_ID") int EXAM_ID);
 //    List<Grade> findGradeByStudentAndSemester(@Param("STUDENT_ID") int STUDENT_ID, @Param("SEMESTER") String SEMESTER);
 }

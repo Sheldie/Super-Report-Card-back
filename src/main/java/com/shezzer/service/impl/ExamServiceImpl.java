@@ -27,6 +27,12 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
+    public boolean deleteExam(Exam exam) {
+        examMapper.deleteExam(exam);
+        return true;
+    }
+
+    @Override
     public Exam checkExam(Exam exam) {
         return examMapper.checkExam(exam);
     }

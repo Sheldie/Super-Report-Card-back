@@ -1,23 +1,18 @@
-package com.shezzer.pojo;
+package com.shezzer.pojo.result;
 
-public class Grade {
+import java.sql.Date;
+
+public class GradeMap2 {
     private int GRADE_ID;
-    private int EXAM_ID;
-    private int STUDENT_ID;
+    private String SEMESTER;
+    private Date EXAM_DATE;
+    private String EXAM_NAME;
     private int GRADE;
     private int TARGET;
     private int T_SCORE;
-    private int S_SCORE;
     private String T_COMMENT;
+    private int S_SCORE;
     private String S_COMMENT;
-
-    public Grade() {
-    }
-
-    public Grade(int EXAM_ID, int STUDENT_ID) {
-        this.EXAM_ID = EXAM_ID;
-        this.STUDENT_ID = STUDENT_ID;
-    }
 
     public int getGRADE_ID() {
         return GRADE_ID;
@@ -27,20 +22,28 @@ public class Grade {
         this.GRADE_ID = GRADE_ID;
     }
 
-    public int getEXAM_ID() {
-        return EXAM_ID;
+    public String getSEMESTER() {
+        return SEMESTER;
     }
 
-    public void setEXAM_ID(int EXAM_ID) {
-        this.EXAM_ID = EXAM_ID;
+    public void setSEMESTER(String SEMESTER) {
+        this.SEMESTER = SEMESTER;
     }
 
-    public int getSTUDENT_ID() {
-        return STUDENT_ID;
+    public String getEXAM_DATE() {
+        return EXAM_DATE.toString();
     }
 
-    public void setSTUDENT_ID(int STUDENT_ID) {
-        this.STUDENT_ID = STUDENT_ID;
+    public void setEXAM_DATE(Date EXAM_DATE) {
+        this.EXAM_DATE = EXAM_DATE;
+    }
+
+    public String getEXAM_NAME() {
+        return EXAM_NAME;
+    }
+
+    public void setEXAM_NAME(String EXAM_NAME) {
+        this.EXAM_NAME = EXAM_NAME;
     }
 
     public int getGRADE() {
@@ -67,20 +70,20 @@ public class Grade {
         T_SCORE = t_SCORE;
     }
 
-    public int getS_SCORE() {
-        return S_SCORE;
-    }
-
-    public void setS_SCORE(int s_SCORE) {
-        S_SCORE = s_SCORE;
-    }
-
     public String getT_COMMENT() {
         return T_COMMENT;
     }
 
     public void setT_COMMENT(String t_COMMENT) {
         T_COMMENT = t_COMMENT;
+    }
+
+    public int getS_SCORE() {
+        return S_SCORE;
+    }
+
+    public void setS_SCORE(int s_SCORE) {
+        S_SCORE = s_SCORE;
     }
 
     public String getS_COMMENT() {

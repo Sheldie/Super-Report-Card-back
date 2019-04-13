@@ -29,8 +29,8 @@
             ORDER BY GRADE DESC) T, COURSE C, EXAM E, STUDENT S, SUBJECT SU
                     where T.EXAM_ID IN (select EXAM_ID
                         from EXAM where COURSE_ID IN (select COURSE_ID
-                            from COURSE where SEMESTER = '20182019S'))
-                            AND T.STUDENT_ID = 19
+                            from COURSE where SEMESTER = #{SEMESTER}))
+                            AND T.STUDENT_ID = #{STUDENT_ID}
                             AND E.EXAM_ID = T.EXAM_ID
                             AND C.COURSE_ID = E.COURSE_ID
                             AND T.STUDENT_ID = S.USER_ID
@@ -38,7 +38,7 @@
     </select>
     
     <select id="findGradeByExam" parameterType="string" resultType="Map">
-        SELECT S.STUDENT_NAME, T.GRADE, T.RANK, CONVERT(100 - (T.RANK - 1) / (P.CNT - 1) * 100, DECIMAL(10,2)) RATE, T.TARGET FROM
+        SELECT T.GRADE_ID, S.STUDENT_NAME, T.GRADE, T.RANK, CONVERT(100 - (T.RANK - 1) / (P.CNT - 1) * 100, DECIMAL(10,2)) RATE, T.TARGET FROM
             (SELECT *,
             @curRank := IF(@prevRank = GRADE, @curRank, @incRank) AS RANK,
             @incRank := @incRank + 1,
@@ -51,7 +51,6 @@
 
             (SELECT COUNT(*) CNT FROM GRADE
             WHERE EXAM_ID = #{EXAM_ID}) P, STUDENT S
-
             WHERE S.USER_ID = T.STUDENT_ID;
     </select>
     
@@ -132,5 +131,33 @@
         update GRADE set TARGET = #{TARGET}
         where GRADE_ID = #{GRADE_ID}
     </update>
+
+    <update id="studentComment" parameterType="Grade">
+        update GRADE set S_SCORE = #{S_SCORE}, S_COMMENT = #{S_COMMENT}
+        where GRADE_ID = #{GRADE_ID}
+    </update>
+
+    <update id="teacherComment" parameterType="Grade">
+        update GRADE set T_SCORE = #{T_SCORE}, T_COMMENT = #{T_COMMENT}
+        where GRADE_ID = #{GRADE_ID}
+    </update>
+    
+    <select id="findGradeByStudentAndCourse" parameterType="string" resultType="GradeMap2">
+        select G.GRADE_ID, C.SEMESTER, E.EXAM_DATE, E.EXAM_NAME, G.GRADE, G.TARGET, G.T_SCORE, G.T_COMMENT, G.S_SCORE, G.S_COMMENT
+        from GRADE G, EXAM E, COURSE C
+        where G.EXAM_ID in
+        (select EXAM_ID from EXAM
+        where COURSE_ID = #{COURSE_ID})
+        and G.EXAM_ID = E.EXAM_ID
+        and C.COURSE_ID = E.COURSE_ID
+        and datediff(E.EXAM_DATE,sysdate()) &lt;= 0
+        and STUDENT_ID = #{STUDENT_ID}
+        order by E.EXAM_DATE
+    </select>
+
+    <delete id="deleteGrade" parameterType="Grade">
+        delete from GRADE
+        where GRADE_ID = #{GRADE_ID}
+    </delete>
 
 </mapper>

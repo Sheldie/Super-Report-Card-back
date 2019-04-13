@@ -30,6 +30,11 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public List<Map> findClassByTeacher(int TEACHER_ID) {
+        return courseMapper.findClassByTeacher(TEACHER_ID);
+    }
+
+    @Override
     public List<Map> findCourseByTeacher(int TEACHER_ID) {
         return courseMapper.findCourseByTeacher(TEACHER_ID);
     }

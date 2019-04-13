@@ -3,6 +3,7 @@ package com.shezzer.controller;
 import com.shezzer.pojo.*;
 import com.shezzer.pojo.base.Result;
 import com.shezzer.service.*;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -199,6 +200,56 @@ public class ExamController {
                 return Result.success(0, "Successful update.");
             }
             else {
+                return Result.failed(1, "Exam doesn't exist.");
+            }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/checkCount")
+    @ApiOperation(value = "校准考试人数", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Successful update."),
+    })
+    public Result checkCount(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            Course course = courseService.findCourseById(exam.getCOURSE_ID());
+            List<Student> list = studentService.findStudentByClass(course.getCLASS_ID());
+            for(Student stu: list){
+                Grade grade = new Grade(exam.getEXAM_ID(),stu.getUSER_ID());
+                Grade exist = gradeService.findGradeByStudentAndExam(grade);
+                if(exist == null)
+                    gradeService.addGrade(grade);
+            }
+            return Result.success("Success");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/deleteExam")
+    @ApiOperation(value = "删除考试", notes = "")
+    @ApiResponses({
+            @ApiResponse(code = -1, message = "Error"),
+            @ApiResponse(code = 0, message = "Successful update."),
+    })
+    public Result deleteExam(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam != null){
+                List<Map> list = gradeService.findGradeByExam(EXAM_ID);
+                for(Map map: list){
+                    gradeService.deleteGrade((int) map.get("GRADE_ID"));
+                }
+                examService.deleteExam(exam);
+                return Result.success("Success");
+            }
+            else{
                 return Result.failed(1, "Exam doesn't exist.");
             }
         }

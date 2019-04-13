@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shezzer.mapper.ArticleMapper">
+
+    <select id="findArticleById" parameterType="string" resultType="Article">
+        select * from ARTICLE where ARTICLE_ID = #{ARTICLE_ID}
+    </select>
+
+    <select id="listArticle" parameterType="string" resultType="ArticleMap">
+        select A.ARTICLE_ID, A.ARTICLE_TITLE, A.ARTICLE_AUTHOR, T.TEACHER_NAME, A.ARTICLE_TIME, A.ARTICLE_TEXT
+        from ARTICLE A, TEACHER T
+        where A.ARTICLE_AUTHOR = T.USER_ID
+    </select>
+
+    <insert id="addArticle" parameterType="string">
+        insert into ARTICLE (ARTICLE_TITLE, ARTICLE_AUTHOR, ARTICLE_TEXT) VALUES (#{ARTICLE_TITLE}, #{ARTICLE_AUTHOR}, #{ARTICLE_TEXT})
+    </insert>
+
+    <update id="updateArticle" parameterType="Article">
+        update ARTICLE
+        set ARTICLE_TITLE = #{ARTICLE_TITLE}, ARTICLE_TEXT = #{ARTICLE_TEXT}
+        where ARTICLE_ID = #{ARTICLE_ID}
+    </update>
+
+    <delete id="deleteArticle" parameterType="Article">
+        delete from ARTICLE
+        where ARTICLE_ID = #{ARTICLE_ID}
+    </delete>
+</mapper>

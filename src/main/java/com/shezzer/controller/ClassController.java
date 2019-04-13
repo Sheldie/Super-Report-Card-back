@@ -1,8 +1,11 @@
 package com.shezzer.controller;
 
 import com.shezzer.pojo.Class;
+import com.shezzer.pojo.User;
 import com.shezzer.pojo.base.Result;
 import com.shezzer.service.ClassService;
+import com.shezzer.service.CourseService;
+import com.shezzer.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -18,6 +21,10 @@ import java.util.List;
 public class ClassController {
     @Autowired
     private ClassService classService;
+    @Autowired
+    private CourseService courseService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/listClass")
     @ApiOperation(value = "班级列表", notes = "")
@@ -49,6 +56,27 @@ public class ClassController {
             }
             else
                 return Result.failed(1, "Class doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findClassByTeacher")
+    @ApiOperation(value = "老师查看自己授课的班级", notes = "")
+    public Result findClassByTeacher(int USER_ID){
+        try{
+            User user = userService.findUserById(USER_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 2){
+                    return Result.success(courseService.findClassByTeacher(USER_ID));
+                }
+                else
+                    return Result.failed(2, "Not a teacher.");
+            }
+            else
+                return Result.failed(1, "User doesn't exist.");
         }
         catch (Exception e){
             return Result.error(e.toString());

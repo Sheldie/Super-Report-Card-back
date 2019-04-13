@@ -4,7 +4,6 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 public class User {
-
     private int USER_ID;
     private String USER_NAME;
     private String USER_PASSWORD;
