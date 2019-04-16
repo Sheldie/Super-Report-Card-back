@@ -20,6 +20,17 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public boolean deleteTeacher(int TEACHER_ID) {
+        teacherMapper.deleteTeacher(TEACHER_ID);
+        return true;
+    }
+
+    @Override
+    public void updateTeacherByDepartment(Teacher teacher) {
+        teacherMapper.updateTeacherByDepartment(teacher);
+    }
+
+    @Override
     public Teacher findTeacherById(int TEACHER_ID) {
         return teacherMapper.findTeacherById(TEACHER_ID);
     }

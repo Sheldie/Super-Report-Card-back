@@ -11,6 +11,7 @@ public interface UserService {
     int checkAuthority(int id);
     boolean setAuthority(User user);
     boolean changePassword(User user);
+    boolean deleteUser(int USER_ID);
     User findUserById(int id);
     List<User> listUser();
 }

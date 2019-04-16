@@ -126,4 +126,26 @@ public class StudentController {
         }
     }
 
+    @PostMapping("/deleteStudent")
+    public Result deleteStudent(int STUDENT_ID){
+        try {
+            User user = userService.findUserById(STUDENT_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 3){
+                    studentService.deleteStudent(STUDENT_ID);
+                    userService.deleteUser(STUDENT_ID);
+                    return Result.success("Success");
+                }
+                else
+                    return Result.failed(2, "Not a student.");
+            }
+            else
+                return Result.failed(1, "User doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
 }

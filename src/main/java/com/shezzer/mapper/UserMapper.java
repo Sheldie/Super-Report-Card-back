@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface UserMapper {
     void addUser(User user);
+    void deleteUser(int USER_ID);
     User findUserByName(String username);
     User findUserById(int id);
     void setAuthority(User user);

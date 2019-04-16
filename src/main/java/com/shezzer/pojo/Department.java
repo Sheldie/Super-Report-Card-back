@@ -5,6 +5,13 @@ public class Department {
     private String DEPARTMENT_NAME;
     private int SCHOOL_ID;
 
+    public Department(){}
+
+    public Department(String DEPARTMENT_NAME, int SCHOOL_ID) {
+        this.DEPARTMENT_NAME = DEPARTMENT_NAME;
+        this.SCHOOL_ID = SCHOOL_ID;
+    }
+
     public int getDEPARTMENT_ID() {
         return DEPARTMENT_ID;
     }

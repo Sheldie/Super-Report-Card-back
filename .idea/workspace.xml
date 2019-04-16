@@ -6,93 +6,72 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af3dd38e-1803-4ac9-a0f5-82f8c2e8e37b" name="Default Changelist" comment="2019-04-07 18:20">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ArticleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ArticleMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/GradeMap2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/article.xml" afterDir="false" />
+    <list default="true" id="af3dd38e-1803-4ac9-a0f5-82f8c2e8e37b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/SchoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/SchoolController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ExamMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ExamMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/GradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/GradeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/ExamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ExamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ExamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/GradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/GradeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/course.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/course.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/exam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/exam.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/grade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/grade.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/DepartmentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/TeacherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/DepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/department.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/department.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/ExamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/GradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/GradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/SchoolController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/SchoolController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/controller/TeacherController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/ClassMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/CourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/CourseMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/DepartmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/ExamMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/ExamMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/GradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Grade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/TeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/pojo/Department.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/ClassService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/ClassService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/CourseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/ExamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/GradeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/TeacherService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/ClassServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/ClassServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/CourseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/ExamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/ExamServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/GradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/GradeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/TeacherServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/com/shezzer/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/course.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/course.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/department.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/department.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/exam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/exam.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/grade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/grade.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/ExamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/GradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/GradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Super_Report_Card/WEB-INF/classes/mapper/user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/SchoolController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/SchoolController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/controller/TeacherController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/ClassMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/CourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/CourseMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/DepartmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/ExamMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/ExamMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/GradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/Grade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/TeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/pojo/Department.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/ClassService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/ClassService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/CourseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/ExamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/GradeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/TeacherService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/ClassServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/ClassServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/CourseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/DepartmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/ExamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/ExamServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/GradeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/GradeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/TeacherServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shezzer/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/course.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/course.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/department.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/department.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/exam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/exam.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/grade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/grade.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/user.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -120,7 +99,7 @@
     <session id="1437359626">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="41" />
+          <entry key="project.closed" value="45" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.102" value="1" />
@@ -143,17 +122,18 @@
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.55" value="2" />
+          <entry key="project.open.time.57" value="3" />
           <entry key="project.open.time.65" value="2" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.75" value="1" />
-          <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.85" value="2" />
+          <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.89" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -162,10 +142,10 @@
           <entry key="dtd" value="1" />
           <entry key="fxml" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="615" />
+          <entry key="java" value="657" />
           <entry key="jsp" value="26" />
           <entry key="tld" value="2" />
-          <entry key="xml" value="181" />
+          <entry key="xml" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -173,27 +153,27 @@
           <entry key="CLASS" value="46" />
           <entry key="DTD" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="615" />
+          <entry key="JAVA" value="657" />
           <entry key="JSP" value="26" />
-          <entry key="XML" value="184" />
+          <entry key="XML" value="196" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="9" />
-          <entry key="java" value="25969" />
+          <entry key="java" value="28966" />
           <entry key="jsp" value="331" />
-          <entry key="txt" value="53" />
-          <entry key="xml" value="23769" />
+          <entry key="txt" value="61" />
+          <entry key="xml" value="24559" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="25969" />
+          <entry key="JAVA" value="28966" />
           <entry key="JSP" value="331" />
-          <entry key="PLAIN_TEXT" value="62" />
-          <entry key="SQL" value="155" />
-          <entry key="XML" value="23614" />
+          <entry key="PLAIN_TEXT" value="70" />
+          <entry key="SQL" value="160" />
+          <entry key="XML" value="24399" />
         </counts>
       </usages-collector>
     </session>
@@ -201,140 +181,100 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Article.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="1179">
+              <caret line="183" column="58" lean-forward="true" selection-start-line="183" selection-start-column="58" selection-end-line="183" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/exam.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="50" selection-end-column="34" />
               <folding>
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#1004#1005#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#2079#2083#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/User.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/class.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="532">
+              <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Exam.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="115">
+              <caret line="89" selection-start-line="89" selection-end-line="109" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ArticleController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/student.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="342">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/StudentMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/StudentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ArticleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/ArticleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ArticleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/article.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="395">
+              <caret line="141" column="13" lean-forward="true" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ArticleMap.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/TeacherMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-              <folding>
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#909#910#0" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1228#1229#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="133">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/user.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -357,40 +297,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/SubjectServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Exam.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Result/ExamMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/GradeMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/SchoolMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/SchoolService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/SchoolServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/school.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/SchoolController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ExamMap.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/class.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/department.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/DepartmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/CourseMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/CourseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/CourseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Grade.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/GradeMap2.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/course.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/student.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/exam.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/grade.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ExamMapper.java" />
@@ -408,6 +322,32 @@
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ArticleMap.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/article.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/user.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/SchoolController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/teacher.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/TeacherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/TeacherMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/TeacherServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/department.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/class.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/student.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/mapper/StudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java" />
       </list>
     </option>
   </component>
@@ -443,8 +383,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -568,14 +509,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/draft/IdeaProjects/Super_Report_Card/src/main/java/com/shezzer/controller/StudentController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555158975563" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555165130176" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ForumSystemServer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -731,7 +671,11 @@
       <workItem from="1554890396317" duration="12156000" />
       <workItem from="1554952493561" duration="16581000" />
       <workItem from="1555029132897" duration="5963000" />
-      <workItem from="1555064905373" duration="15022000" />
+      <workItem from="1555064905373" duration="16538000" />
+      <workItem from="1555230988155" duration="3384000" />
+      <workItem from="1555311376548" duration="7041000" />
+      <workItem from="1555339626946" duration="3981000" />
+      <workItem from="1555381818090" duration="11118000" />
     </task>
     <task id="LOCAL-00001" summary="sb">
       <created>1552008068881</created>
@@ -782,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554632766575</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2019-04-13 20:45">
+      <created>1555159775499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555159775499</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335747000" />
+    <option name="totallyTimeSpent" value="362787000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,7 +752,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30063966" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31343284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -811,7 +762,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968017" weight="0.31053203" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49626866" visible="true" weight="0.31053203" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -819,7 +770,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4989339" weight="0.32790446" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946696" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50319827" side_tool="true" visible="true" weight="0.31053203" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50373137" side_tool="true" weight="0.31053203" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32899022" />
       <window_info anchor="bottom" id="Application Servers" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.329718" />
@@ -874,172 +825,14 @@
     <MESSAGE value="2019-03-15 8:57" />
     <MESSAGE value="2019-03-15 9:00" />
     <MESSAGE value="2019-04-07 18:20" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-07 18:20" />
+    <MESSAGE value="2019-04-13 20:45" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-13 20:45" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/GradeMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/GradeMap2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ExamMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/GradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="395" column="21" selection-start-line="395" selection-start-column="21" selection-end-line="395" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/teacher.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/subject.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/department.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/school.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/CourseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/CourseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Grade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1383">
-          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/course.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/grade.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3040">
-          <caret line="160" column="13" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
-          <folding>
-            <element signature="e#7124#7128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/ExamService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ExamServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/student.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1061,16 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1088,44 +871,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/article.tld">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/class.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/article.tld" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/CourseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1136,23 +886,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/exam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="108" />
-          <folding>
-            <element signature="e#2079#2083#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2276">
-          <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ExamMapper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1175,89 +908,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/user.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ArticleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ArticleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ArticleServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/article.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="27" selection-start-line="27" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/result/ArticleMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="304">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
@@ -1265,16 +947,259 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/SchoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3192">
+          <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/TeacherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/article.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/teacher.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="456">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/TeacherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/DepartmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/DepartmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/school.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/department.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/ClassMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/ClassService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/pojo/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/ClassServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+          <folding>
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/ClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1179">
+          <caret line="183" column="58" lean-forward="true" selection-start-line="183" selection-start-column="58" selection-end-line="183" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/class.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/exam.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="e#2079#2083#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/student.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/TeacherMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/mapper/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="89" selection-start-line="89" selection-end-line="109" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shezzer/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="141" column="13" lean-forward="true" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
         </state>
       </provider>
     </entry>

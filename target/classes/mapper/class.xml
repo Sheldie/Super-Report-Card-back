@@ -5,6 +5,10 @@
 
 <mapper namespace="com.shezzer.mapper.ClassMapper">
 
+    <insert id="addClass" parameterType="Class">
+        insert into CLASS (CLASS_NAME, SCHOOL_ID, TEACHER_ID) values (#{CLASS_NAME}, #{SCHOOL_ID}, #{TEACHER_ID})
+    </insert>
+
     <select id="findClassById" parameterType="string" resultType="Class">
         select * from CLASS where CLASS_ID = #{CLASS_ID}
     </select>
@@ -12,5 +16,27 @@
     <select id="findAllByClass" parameterType="string" resultType="Class">
         select * from CLASS
     </select>
+
+    <select id="findClassBySchool" parameterType="string" resultType="Class">
+        select * from CLASS
+        where SCHOOL_ID = #{SCHOOL_ID}
+    </select>
+
+    <select id="getClassBySchool" parameterType="string" resultType="Map">
+        select C.CLASS_ID, S.SCHOOL_NAME, C.CLASS_NAME, T.TEACHER_NAME from CLASS C, SCHOOL S, TEACHER T
+        where S.SCHOOL_ID = C.SCHOOL_ID
+        and T.USER_ID = C.TEACHER_ID
+        and S.SCHOOL_ID = #{SCHOOL_ID}
+    </select>
+
+    <update id="updateClassByTeacher" parameterType="Class">
+        update CLASS set TEACHER_ID = #{TEACHER_ID}
+        where CLASS_ID = #{CLASS_ID}
+    </update>
+
+    <delete id="deleteClass" parameterType="Class">
+        delete from CLASS
+        where CLASS_ID = #{CLASS_ID}
+    </delete>
 
 </mapper>

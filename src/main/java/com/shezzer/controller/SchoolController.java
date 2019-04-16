@@ -47,6 +47,8 @@ public class SchoolController {
                 int AY = user.getUSER_AUTHORITY();
                 if(AY == -1){
                     schoolService.addSchool(school);
+                    user.setUSER_AUTHORITY(1);
+                    userService.setAuthority(user);
                     return Result.success(0,"School added.");
                 }
                 else

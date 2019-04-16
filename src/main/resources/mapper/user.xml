@@ -28,4 +28,9 @@
     <select id="listUser" parameterType="string" resultType="User">
         select USER_NAME, USER_AUTHORITY, USER_CREATETIME from USER
     </select>
+
+    <select id="deleteUser" parameterType="User">
+        delete from USER
+        where USER_ID = #{USER_ID}
+    </select>
 </mapper>

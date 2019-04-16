@@ -20,6 +20,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public void deleteStudent(int STUDENT_ID) {
+        studentMapper.deleteStudent(STUDENT_ID);
+    }
+
+    @Override
     public Student checkStudent(Student student) {
         return studentMapper.checkStudent(student);
     }

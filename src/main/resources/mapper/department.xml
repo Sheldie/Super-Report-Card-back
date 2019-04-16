@@ -5,6 +5,10 @@
 
 <mapper namespace="com.shezzer.mapper.DepartmentMapper">
 
+    <insert id="addDepartment" parameterType="Department">
+        insert into DEPARTMENT (DEPARTMENT_NAME, SCHOOL_ID) values (#{DEPARTMENT_NAME}, #{SCHOOL_ID})
+    </insert>
+
     <select id="findDepartmentById" parameterType="string" resultType="Department">
         select * from DEPARTMENT where DEPARTMENT_ID = #{DEPARTMENT_ID}
     </select>
@@ -12,5 +16,15 @@
     <select id="findAllDepartment" parameterType="string" resultType="Department">
         select * from DEPARTMENT
     </select>
+
+    <select id="findDepartmentBySchool" parameterType="string" resultType="Department">
+        select * from DEPARTMENT
+        where SCHOOL_ID = #{SCHOOL_ID}
+    </select>
+
+    <delete id="deleteDepartment" parameterType="Department">
+        delete from DEPARTMENT
+        where DEPARTMENT_ID = #{DEPARTMENT_ID}
+    </delete>
 
 </mapper>

@@ -87,5 +87,47 @@ public class TeacherController {
         }
     }
 
+    @PostMapping("/deleteTeacher")
+    public Result deleteTeacher(int TEACHER_ID){
+        try {
+            User user = userService.findUserById(TEACHER_ID);
+            if(user != null){
+                int AY = user.getUSER_AUTHORITY();
+                if(AY == 2){
+                    teacherService.deleteTeacher(TEACHER_ID);
+                    userService.deleteUser(TEACHER_ID);
+                    return Result.success("Success.");
+                }
+                else
+                    return Result.failed(2, "Not a teacher.");
+            }
+            else
+                return Result.failed(1, "User doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/updateTeacherByDepartment")
+    public Result updateTeacherByDepartment(int TEACHER_ID, int DEPARTMENT_ID){
+        try {
+            Teacher teacher = teacherService.findTeacherById(TEACHER_ID);
+            if(teacher != null){
+                Department department = departmentService.findDepartmentById(DEPARTMENT_ID);
+                if(department != null){
+                    teacher.setDEPARTMENT_ID(DEPARTMENT_ID);
+                    teacherService.updateTeacherByDepartment(teacher);
+                    return Result.success("Success");
+                }
+                return Result.failed(2, "Department doesn't exist.");
+            }
+            else
+                return Result.failed(1, "Teacher doesn't exist.");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
 
 }

@@ -16,4 +16,15 @@
         select * from TEACHER where DEPARTMENT_ID = #{DEPARTMENT_ID}
     </select>
 
+    <update id="updateTeacherByDepartment" parameterType="Department">
+        update TEACHER
+        set DEPARTMENT_ID = #{DEPARTMENT_ID}
+        where USER_ID = #{USER_ID}
+    </update>
+
+    <delete id="deleteTeacher" parameterType="Teacher">
+        delete from TEACHER
+        where USER_ID = #{TEACHER_ID}
+    </delete>
+
 </mapper>
