@@ -14,6 +14,7 @@ public interface GradeService {
     boolean teacherComment(Grade grade);
     Grade findGradeById(int GRADE_ID);
     Grade findGradeByStudentAndExam(Grade grade);
+    List<Grade> findGradeByStudent(int STUDENT_ID);
     List<Map> findGradeByExam(int EXAM_ID);
     List<Map> getGradeByExam(int EXAM_ID);
     List<Map> findGradeByStudentAndSemester(int STUDENT_ID, String SEMESTER);

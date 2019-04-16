@@ -155,6 +155,10 @@
         order by E.EXAM_DATE
     </select>
 
+    <select id="findGradeByStudent" parameterType="string" resultType="Grade">
+        select * from GRADE
+        where STUDENT_ID = #{STUDENT_ID}
+    </select>
     <delete id="deleteGrade" parameterType="Grade">
         delete from GRADE
         where GRADE_ID = #{GRADE_ID}

@@ -1,15 +1,10 @@
 package com.shezzer.controller;
 
 
+import com.shezzer.pojo.*;
 import com.shezzer.pojo.Class;
-import com.shezzer.pojo.Course;
-import com.shezzer.pojo.Student;
-import com.shezzer.pojo.User;
 import com.shezzer.pojo.base.Result;
-import com.shezzer.service.ClassService;
-import com.shezzer.service.CourseService;
-import com.shezzer.service.StudentService;
-import com.shezzer.service.UserService;
+import com.shezzer.service.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -32,6 +27,8 @@ public class StudentController {
     private UserService userService;
     @Autowired
     private CourseService courseService;
+    @Autowired
+    private GradeService gradeService;
 
     @PostMapping("/addStudent")
     @ApiOperation(value = "学生注册", notes = "用户注册成功后，选择注册学生信息")
@@ -133,6 +130,10 @@ public class StudentController {
             if(user != null){
                 int AY = user.getUSER_AUTHORITY();
                 if(AY == 3){
+                    List<Grade> list = gradeService.findGradeByStudent(STUDENT_ID);
+                    for(Grade t: list){
+                        gradeService.deleteGrade(t.getGRADE_ID());
+                    }
                     studentService.deleteStudent(STUDENT_ID);
                     userService.deleteUser(STUDENT_ID);
                     return Result.success("Success");

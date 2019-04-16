@@ -62,6 +62,11 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public List<Grade> findGradeByStudent(int STUDENT_ID) {
+        return gradeMapper.findGradeByStudent(STUDENT_ID);
+    }
+
+    @Override
     public List<Map> findGradeByExam(int EXAM_ID) {
         return gradeMapper.findGradeByExam(EXAM_ID);
     }

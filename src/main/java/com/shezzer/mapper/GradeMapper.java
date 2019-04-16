@@ -15,6 +15,7 @@ public interface GradeMapper {
     void teacherComment(Grade grade);
     Grade findGradeById(int GRADE_ID);
     Grade findGradeByStudentAndExam(Grade grade);
+    List<Grade> findGradeByStudent(int STUDENT_ID);
     List<Map> findGradeByStudentAndSemester(@Param("STUDENT_ID") int STUDENT_ID, @Param("SEMESTER") String SEMESTER);
     List<Map> findGradeByExam(int EXAM_ID);
     Map<String,String> gradeData(int EXAM_ID);
