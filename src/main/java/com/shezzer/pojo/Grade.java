@@ -10,13 +10,15 @@ public class Grade {
     private int S_SCORE;
     private String T_COMMENT;
     private String S_COMMENT;
+    private int SEAT;
 
     public Grade() {
     }
 
-    public Grade(int EXAM_ID, int STUDENT_ID) {
+    public Grade(int EXAM_ID, int STUDENT_ID, int SEAT) {
         this.EXAM_ID = EXAM_ID;
         this.STUDENT_ID = STUDENT_ID;
+        this.SEAT = SEAT;
     }
 
     public int getGRADE_ID() {
@@ -89,5 +91,13 @@ public class Grade {
 
     public void setS_COMMENT(String s_COMMENT) {
         S_COMMENT = s_COMMENT;
+    }
+
+    public int getSEAT() {
+        return SEAT;
+    }
+
+    public void setSEAT(int SEAT) {
+        this.SEAT = SEAT;
     }
 }

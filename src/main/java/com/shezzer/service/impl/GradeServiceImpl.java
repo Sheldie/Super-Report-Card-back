@@ -52,6 +52,11 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    public void updateSeat(Grade grade) {
+        gradeMapper.updateSeat(grade);
+    }
+
+    @Override
     public Grade findGradeById(int GRADE_ID) {
         return gradeMapper.findGradeById(GRADE_ID);
     }
@@ -104,5 +109,15 @@ public class GradeServiceImpl implements GradeService {
     @Override
     public Map<String, String> gradeData(int EXAM_ID) {
         return gradeMapper.gradeData(EXAM_ID);
+    }
+
+    @Override
+    public List<Map> getSeatByExam(int EXAM_ID) {
+        return gradeMapper.getSeatByExam(EXAM_ID);
+    }
+
+    @Override
+    public List<Grade> findSeatByExam(int EXAM_ID) {
+        return gradeMapper.findSeatByExam(EXAM_ID);
     }
 }

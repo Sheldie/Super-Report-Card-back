@@ -10,6 +10,7 @@
     
     <select id="findStudentByClass" parameterType="string" resultType="Student">
         select * from STUDENT where CLASS_ID=#{CLASS_ID}
+        order by STUDENT_NUM
     </select>
 
     <select id="checkStudent" parameterType="string" resultType="Student">

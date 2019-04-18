@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/exam")
@@ -62,11 +60,13 @@ public class ExamController {
                     List<Student> list = studentService.findStudentByClass(course.getCLASS_ID());
 
                     //Add null grade information for every student.
+                    int seat = 1;
                     for(Student stu: list){
-                        Grade grade = new Grade(exam.getEXAM_ID(),stu.getUSER_ID());
+                        Grade grade = new Grade(exam.getEXAM_ID(),stu.getUSER_ID(),seat);
 //                        Grade exist = gradeService.findGradeByStudentAndExam(grade);
 //                        if(exist == null)
                         gradeService.addGrade(grade);
+                        ++seat;
                     }
                     return Result.success(0, "Exam added.");
                 }
@@ -219,11 +219,18 @@ public class ExamController {
             Exam exam = examService.findExamById(EXAM_ID);
             Course course = courseService.findCourseById(exam.getCOURSE_ID());
             List<Student> list = studentService.findStudentByClass(course.getCLASS_ID());
+
+            int seat = 1;
             for(Student stu: list){
-                Grade grade = new Grade(exam.getEXAM_ID(),stu.getUSER_ID());
+                Grade grade = new Grade(exam.getEXAM_ID(),stu.getUSER_ID(),seat);
                 Grade exist = gradeService.findGradeByStudentAndExam(grade);
                 if(exist == null)
                     gradeService.addGrade(grade);
+                else{
+                    exist.setSEAT(seat);
+                    gradeService.updateSeat(exist);
+                }
+                ++seat;
             }
             return Result.success("Success");
         }
@@ -252,6 +259,80 @@ public class ExamController {
             else{
                 return Result.failed(1, "Exam doesn't exist.");
             }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/seatInOrder")
+    public Result seatInOrder(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam == null)
+                return Result.failed(1, "Exam doesn't exist.");
+
+            List<Grade> list = gradeService.findSeatByExam(EXAM_ID);
+            int seat = 1;
+            for(Grade grade: list){
+                grade.setSEAT(seat);
+                gradeService.updateSeat(grade);
+                ++seat;
+            }
+            return Result.success("Success");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/seatInReverseOrder")
+    public Result seatInReverseOrder(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam == null)
+                return Result.failed(1, "Exam doesn't exist.");
+
+            List<Grade> list = gradeService.findSeatByExam(EXAM_ID);
+            int seat = list.size();
+            for(Grade grade: list){
+                grade.setSEAT(seat);
+                gradeService.updateSeat(grade);
+                --seat;
+            }
+            return Result.success("Success");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/seatInRandomOrder")
+    public Result seatInRandomOrder(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam == null)
+                return Result.failed(1, "Exam doesn't exist.");
+
+            List<Grade> list = gradeService.findSeatByExam(EXAM_ID);
+            List<Integer> num = new ArrayList<>();
+
+            int count = 0;
+            for(Grade grade: list){
+                num.add(++count);
+            }
+
+            for(int i = list.size() - 1; i >= 0; --i){
+                int random = (int)(Math.random() * i);
+                int swap = num.get(random);
+                int temp = num.get(i);
+                num.set(i,swap);
+                num.set(random,temp);
+
+                list.get(i).setSEAT(num.get(i));
+                gradeService.updateSeat(list.get(i));
+            }
+            return Result.success("Success");
         }
         catch (Exception e){
             return Result.error(e.toString());

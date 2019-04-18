@@ -12,6 +12,7 @@ public interface GradeService {
     boolean deleteGrade(int GRADE_ID);
     boolean studentComment(Grade grade);
     boolean teacherComment(Grade grade);
+    void updateSeat(Grade grade);
     Grade findGradeById(int GRADE_ID);
     Grade findGradeByStudentAndExam(Grade grade);
     List<Grade> findGradeByStudent(int STUDENT_ID);
@@ -23,4 +24,6 @@ public interface GradeService {
     List<Map> gradeRate(int EXAM_ID);
     Map getRankByExamAndStudent(int STUDENT_ID, int EXAM_ID);
     Map<String, String> gradeData(int EXAM_ID);
+    List<Map> getSeatByExam(int EXAM_ID);
+    List<Grade> findSeatByExam(int EXAM_ID);
 }

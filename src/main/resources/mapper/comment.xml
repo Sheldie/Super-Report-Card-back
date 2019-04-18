@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shezzer.mapper.CommentMapper">
+
+    <select id="findCommentById" parameterType="string" resultType="Comment">
+        select * from COMMENT where COMMENT_ID = #{COMMENT_ID}
+    </select>
+
+    <select id="findCommentByArticle" parameterType="string" resultType="CommentMap">
+        select C.COMMENT_ID, C.COMMENT_USER, U.USER_NAME, C.ARTICLE_ID, COMMENT_TIME, C.COMMENT_TEXT
+        from COMMENT C, USER U
+        where ARTICLE_ID = #{ARTICLE_ID}
+        and U.USER_ID = C.COMMENT_USER
+        order by COMMENT_TIME
+    </select>
+
+    <insert id="addComment" parameterType="Comment">
+        insert into COMMENT (COMMENT_USER, ARTICLE_ID, COMMENT_TEXT) VALUES (#{COMMENT_USER}, #{ARTICLE_ID}, #{COMMENT_TEXT})
+    </insert>
+
+    <update id="updateComment" parameterType="Comment">
+        update COMMENT
+        set COMMENT_TEXT = #{COMMENT_TEXT}
+        where COMMENT_ID = #{COMMENT_ID}
+    </update>
+
+    <delete id="deleteComment" parameterType="Comment">
+        delete from COMMENT
+        where COMMENT_ID = #{COMMENT_ID}
+    </delete>
+</mapper>

@@ -155,9 +155,29 @@
         order by E.EXAM_DATE
     </select>
 
+    <select id="findGradeByStudent" parameterType="string" resultType="Grade">
+        select * from GRADE
+        where STUDENT_ID = #{STUDENT_ID}
+    </select>
     <delete id="deleteGrade" parameterType="Grade">
         delete from GRADE
         where GRADE_ID = #{GRADE_ID}
     </delete>
+
+    <update id="updateSeat" parameterType="Grade">
+        update GRADE set SEAT = #{SEAT}
+        where GRADE_ID = #{GRADE_ID}
+    </update>
+
+    <select id="findSeatByExam" parameterType="string" resultType="Grade">
+        select * from GRADE
+        where EXAM_ID = #{EXAM_ID}
+    </select>
+
+    <select id="getSeatByExam" parameterType="string" resultType="Map">
+        select G.GRADE_ID, G.STUDENT_ID, S.STUDENT_NUM, S.STUDENT_NAME, G.SEAT from GRADE G, STUDENT S
+        where G.STUDENT_ID = S.USER_ID
+        and EXAM_ID = #{EXAM_ID}
+    </select>
 
 </mapper>

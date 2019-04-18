@@ -406,4 +406,17 @@ public class GradeController {
         }
     }
 
+    @PostMapping("/getSeatByExam")
+    public Result getSeatByExam(int EXAM_ID){
+        try{
+            Exam exam = examService.findExamById(EXAM_ID);
+            if(exam == null)
+                return Result.failed(1, "Exam doesn't exist.");
+            return Result.success(gradeService.getSeatByExam(EXAM_ID));
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
 }
