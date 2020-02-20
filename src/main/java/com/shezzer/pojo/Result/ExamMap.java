@@ -12,6 +12,7 @@ public class ExamMap {
     private int GRADE_ID;
     private Date EXAM_DATE;
     private int DAYS_LEFT;
+    private int SEAT;
 
     public int getEXAM_ID() {
         return EXAM_ID;
@@ -79,5 +80,13 @@ public class ExamMap {
 
     public void setCLASS_NAME(String CLASS_NAME) {
         this.CLASS_NAME = CLASS_NAME;
+    }
+
+    public int getSEAT() {
+        return SEAT;
+    }
+
+    public void setSEAT(int SEAT) {
+        this.SEAT = SEAT;
     }
 }

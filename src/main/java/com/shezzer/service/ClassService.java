@@ -8,6 +8,7 @@ import java.util.Map;
 public interface ClassService {
     Class findClassById(int CLASS_ID);
     List<Class> findAllByClass();
+    List<Class> findClassByHead(int TEACHER_ID);
     List<Class> findClassBySchool(int SCHOOL_ID);
     List<Map> getClassBySchool(int SCHOOL_ID);
     void addClass(Class cs);

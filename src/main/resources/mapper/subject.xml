@@ -13,5 +13,20 @@
         select * from SUBJECT
     </select>
 
+    <insert id="addSubject" parameterType="Subject">
+        insert into SUBJECT (SUBJECT_NAME) values (#{SUBJECT_NAME})
+    </insert>
+
+    <update id="updateSubject" parameterType="Subject">
+        update SUBJECT
+        set SUBJECT_NAME = #{SUBJECT_NAME}
+        where SUBJECT_ID = #{SUBJECT_ID}
+    </update>
+
+    <delete id="deleteSubject" parameterType="Subject">
+        delete from SUBJECT
+        where SUBJECT_ID = #{SUBJECT_ID}
+    </delete>
+
 
 </mapper>

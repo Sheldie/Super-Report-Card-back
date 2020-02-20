@@ -194,4 +194,17 @@ public class ClassController {
             return Result.error(e.toString());
         }
     }
+
+    @PostMapping("findTeacherByHead")
+    public Result findTeacherByHead(int TEACHER_ID){
+        try{
+            Teacher teacher = teacherService.findTeacherById(TEACHER_ID);
+            if(teacher == null)
+                return Result.failed(2, "Teacher doesn't exist.");
+            return Result.success(classService.findClassByHead(TEACHER_ID));
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
 }

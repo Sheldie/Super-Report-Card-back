@@ -1,12 +1,11 @@
 package com.shezzer.controller;
 
+import com.shezzer.pojo.Class;
 import com.shezzer.pojo.Department;
 import com.shezzer.pojo.Teacher;
 import com.shezzer.pojo.User;
 import com.shezzer.pojo.base.Result;
-import com.shezzer.service.DepartmentService;
-import com.shezzer.service.TeacherService;
-import com.shezzer.service.UserService;
+import com.shezzer.service.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/teacher")
@@ -26,6 +26,10 @@ public class TeacherController {
     private UserService userService;
     @Autowired
     private DepartmentService departmentService;
+    @Autowired
+    private CourseService courseService;
+    @Autowired
+    private ClassService classService;
 
     @PostMapping("/addTeacher")
     @ApiOperation(value = "addTeacher", notes = "用户注册成功后，选择注册教师信息")
@@ -94,6 +98,12 @@ public class TeacherController {
             if(user != null){
                 int AY = user.getUSER_AUTHORITY();
                 if(AY == 2){
+                    List<Map> list = courseService.findCourseByTeacher(TEACHER_ID);
+                    List<Class> cs = classService.findClassByHead(TEACHER_ID);
+                    if(list.size() != 0)
+                        return Result.failed(3, "Teacher has courses.");
+                    if(cs.size() != 0)
+                        return Result.failed(4, "Teacher is a head teacher.");
                     teacherService.deleteTeacher(TEACHER_ID);
                     userService.deleteUser(TEACHER_ID);
                     return Result.success("Success.");

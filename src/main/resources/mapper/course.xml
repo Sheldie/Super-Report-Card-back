@@ -41,5 +41,27 @@
         where C.CLASS_ID = CL.CLASS_ID
         and C.TEACHER_ID = #{TEACHER_ID}
     </select>
+    
+    <select id="findCourseBySubject" parameterType="string" resultType="Course">
+        select * from COURSE where SUBJECT_ID = #{SUBJECT_ID}
+    </select>
+
+    <select id="getCourseBySubject" parameterType="string" resultType="Map">
+        select C.COURSE_ID, CL.CLASS_ID, CL.CLASS_NAME, S.SUBJECT_NAME, T.TEACHER_NAME, C.SEMESTER from COURSE C, SUBJECT S, CLASS CL, TEACHER T
+        where S.SUBJECT_ID = C.SUBJECT_ID
+        AND C.CLASS_ID = CL.CLASS_ID
+        AND T.USER_ID = C.TEACHER_ID
+        AND C.SUBJECT_ID = #{SUBJECT_ID}
+    </select>
+
+    <update id="updateCourse" parameterType="Course">
+        update COURSE set TEACHER_ID = #{TEACHER_ID}
+        where COURSE_ID = #{COURSE_ID}
+    </update>
+
+    <delete id="deleteCourse" parameterType="Course">
+        delete from COURSE
+        where COURSE_ID = #{COURSE_ID}
+    </delete>
 
 </mapper>

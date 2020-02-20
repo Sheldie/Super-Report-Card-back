@@ -8,8 +8,7 @@ public class Subject {
     public Subject() {
     }
 
-    public Subject(int SUBJECT_ID, String SUBJECT_NAME) {
-        this.SUBJECT_ID = SUBJECT_ID;
+    public Subject(String SUBJECT_NAME) {
         this.SUBJECT_NAME = SUBJECT_NAME;
     }
 

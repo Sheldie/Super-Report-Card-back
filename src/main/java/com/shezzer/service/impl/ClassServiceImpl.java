@@ -25,6 +25,11 @@ public class ClassServiceImpl implements ClassService {
     }
 
     @Override
+    public List<Class> findClassByHead(int TEACHER_ID) {
+        return classMapper.findClassByHead(TEACHER_ID);
+    }
+
+    @Override
     public List<Class> findClassBySchool(int SCHOOL_ID) {
         return classMapper.findClassBySchool(SCHOOL_ID);
     }

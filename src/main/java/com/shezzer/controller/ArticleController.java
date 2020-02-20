@@ -1,9 +1,12 @@
 package com.shezzer.controller;
 
 import com.shezzer.pojo.Article;
+import com.shezzer.pojo.Comment;
 import com.shezzer.pojo.User;
 import com.shezzer.pojo.base.Result;
+import com.shezzer.pojo.result.CommentMap;
 import com.shezzer.service.ArticleService;
+import com.shezzer.service.CommentService;
 import com.shezzer.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -13,6 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
@@ -20,6 +25,8 @@ public class ArticleController {
     ArticleService articleService;
     @Autowired
     UserService userService;
+    @Autowired
+    CommentService commentService;
 
     @PostMapping("/addArticle")
     public Result addArticle(String ARTICLE_TITLE, int ARTICLE_AUTHOR, String ARTICLE_TEXT){
@@ -69,6 +76,9 @@ public class ArticleController {
         try {
             Article article = articleService.findArticleById(ARTICLE_ID);
             if(article != null){
+                List<CommentMap> list = commentService.findCommentByArticle(ARTICLE_ID);
+                for(CommentMap ct : list)
+                    commentService.deleteComment(ct.getCOMMENT_ID());
                 articleService.deleteArticle(ARTICLE_ID);
                 return Result.success("Success");
             }

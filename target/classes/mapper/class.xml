@@ -38,5 +38,10 @@
         delete from CLASS
         where CLASS_ID = #{CLASS_ID}
     </delete>
+    
+    <select id="findClassByHead" parameterType="string" resultType="Class">
+        select * from CLASS
+        where TEACHER_ID = #{TEACHER_ID}
+    </select>
 
 </mapper>

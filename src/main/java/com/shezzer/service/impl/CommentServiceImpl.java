@@ -2,6 +2,7 @@ package com.shezzer.service.impl;
 
 import com.shezzer.mapper.CommentMapper;
 import com.shezzer.pojo.Comment;
+import com.shezzer.pojo.result.CommentMap;
 import com.shezzer.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<Comment> findCommentByArticle(int ARTICLE_ID) {
+    public List<CommentMap> findCommentByArticle(int ARTICLE_ID) {
         return commentMapper.findCommentByArticle(ARTICLE_ID);
     }
 }

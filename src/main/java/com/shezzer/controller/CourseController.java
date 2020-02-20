@@ -28,6 +28,8 @@ public class CourseController {
     private SubjectService subjectService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private ExamService examService;
 
     @PostMapping("/addCourse")
     @ApiOperation(value = "添加课程", notes = "学期的格式：如 20182019A 或 20182019S")
@@ -120,6 +122,67 @@ public class CourseController {
             else {
                 return Result.failed(1, "User doesn't exist.");
             }
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/findCourseBySubject")
+    public Result findCourseBySubject(int SUBJECT_ID){
+        try {
+            Subject subject = subjectService.findSubjectById(SUBJECT_ID);
+            if(subject == null)
+                return Result.failed(1, "Subject doesn't exist.");
+            return Result.success(courseService.findCourseBySubject(SUBJECT_ID));
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/getCourseBySubject")
+    public Result getCourseBySubject(int SUBJECT_ID){
+        try {
+            Subject subject = subjectService.findSubjectById(SUBJECT_ID);
+            if(subject == null)
+                return Result.failed(1, "Subject doesn't exist.");
+            return Result.success(courseService.getCourseBySubject(SUBJECT_ID));
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/updateCourse")
+    public Result updateCourse(int COURSE_ID, int TEACHER_ID){
+        try {
+            Course course = courseService.findCourseById(COURSE_ID);
+            Teacher teacher = teacherService.findTeacherById(TEACHER_ID);
+            if(course == null)
+                return Result.failed(1, "Course doesn't exist.");
+            if(teacher == null)
+                return Result.failed(2, "Teacher doesn't exist.");
+            course.setTEACHER_ID(TEACHER_ID);
+            courseService.updateCourse(course);
+            return Result.success("Success");
+        }
+        catch (Exception e){
+            return Result.error(e.toString());
+        }
+    }
+
+    @PostMapping("/deleteCourse")
+    public Result deleteCourse(int COURSE_ID){
+        try {
+            Course course = courseService.findCourseById(COURSE_ID);
+            if(course == null)
+                return Result.failed(1, "Course doesn't exist.");
+            List<Map> list = examService.findExamByCourse(COURSE_ID);
+            if(list.size() != 0)
+                return Result.failed(2, "Course has exams.");
+            courseService.deleteCourse(COURSE_ID);
+            return Result.success("Success");
         }
         catch (Exception e){
             return Result.error(e.toString());

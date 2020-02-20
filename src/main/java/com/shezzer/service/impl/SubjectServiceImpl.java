@@ -14,6 +14,21 @@ public class SubjectServiceImpl implements SubjectService {
     SubjectMapper subjectMapper;
 
     @Override
+    public void addSubject(Subject subject) {
+        subjectMapper.addSubject(subject);
+    }
+
+    @Override
+    public void updateSubject(Subject subject) {
+        subjectMapper.updateSubject(subject);
+    }
+
+    @Override
+    public void deleteSubject(int SUBJECT_ID) {
+        subjectMapper.deleteSubject(SUBJECT_ID);
+    }
+
+    @Override
     public Subject findSubjectById(int SUBJECT_ID) {
         return subjectMapper.findSubjectById(SUBJECT_ID);
     }
